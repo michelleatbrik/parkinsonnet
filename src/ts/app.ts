@@ -1,4 +1,5 @@
 import '@css/app.pcss';
+
 import ComponentLoader, { Component } from './loader';
 
 const componentLoader = new ComponentLoader();
@@ -25,7 +26,7 @@ const components: Component[] = [
 	},
 	{
 		name: 'alpine',
-		selector: '[data-alpine]',
+		selector: '[x-data]',
 	},
 	{
 		name: 'datastar',

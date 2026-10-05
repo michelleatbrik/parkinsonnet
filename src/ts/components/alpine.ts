@@ -19,3 +19,27 @@ async function loadModules() {
 		await mod[1]();
 	}
 }
+
+Alpine.data('mobileMenu', () => ({
+	isOpen: false,
+
+	init() {
+		window.addEventListener('mobileMenu:toggle', () => this.toggle());
+		window.addEventListener('mobileMenu:open', () => this.open());
+	},
+
+	toggle() {
+		this.isOpen ? this.close() : this.open();
+	},
+
+	open() {
+		this.$el.focus({ preventScroll: true });
+		this.isOpen = true;
+		document.body.classList.add('overflow-hidden');
+	},
+
+	close() {
+		this.isOpen = false;
+		document.body.classList.remove('overflow-hidden');
+	},
+}));

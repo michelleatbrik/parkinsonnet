@@ -1,15 +1,93 @@
-@import './components/tailwind.pcss';
-@import './components/swiper.pcss';
-@import './components/videoPlayer.pcss';
+/* theme: depont */
+@import 'tailwindcss';
 
-@layer base {
-	:root {
-		--color-primary: 37 4 54;
-		--color-secondary: 243 178 214;
-		--skip-to-content-bg: 0 0 0;
-	}
+@import './components/container.pcss';
+@import './components/spacing.pcss';
+@import './components/colors.pcss';
+@import './components/typography.pcss';
+@import './components/videoPlayer.pcss';
+@import './components/formie.pcss';
+@import './components/swiper.pcss';
+
+@plugin 'tailwindcss-debug-screens';
+
+@theme {
+	--color-white: #fff;
+	--color-black: #000;
+
+	--font-*: initial;
+	--font-heading: 'Montserrat', sans-serif;
+	--font-text: 'Cabin', sans-serif;
+
+	--breakpoint-*: initial;
+	--breakpoint-xs: 480px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-xl: 1441px;
+	--breakpoint-2xl: 1601px;
+	--breakpoint-3xl: 2001px;
+
+	--aspect-one-by-one: 1/1;
+	--aspect-three-by-four: 3/4;
+	--aspect-four-by-three: 4/3;
+	--aspect-sixteen-by-nine: 16/9;
+
+	--z-index-preview: 99999;
 }
 
-[x-cloak] {
-	display: none !important;
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentColor);
+	}
+
+	html,
+	body {
+		@apply font-text;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	[data-media-player] {
+		--plyr-color-main: #ffdf3c;
+		--plyr-border-radius: 0px;
+
+		--plyr-video-control-background: #ffdf3c;
+		--plyr-video-control-color: #000;
+		--plyr-video-control-color-hover: #000;
+
+		contain: layout !important;
+
+		.plyr__control--overlaid {
+			background-color: var(--plyr-video-control-background) !important;
+			border-radius: 0px !important;
+			svg {
+				margin-left: -2px;
+			}
+		}
+	}
+
+	/* For more information: https://getbootstrap.com/docs/5.0/helpers/stretched-link/ */
+	.stretched-link {
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			content: '';
+		}
+	}
 }

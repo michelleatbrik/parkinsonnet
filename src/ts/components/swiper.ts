@@ -21,7 +21,7 @@ export default function swiper() {
 			navigation: {
 				nextEl: buttonNext,
 				prevEl: buttonPrev,
-				disabledClass: 'opacity-50',
+				disabledClass: 'opacity-50 pointer-events-none',
 			},
 			pagination: {
 				el: pagination,
@@ -38,32 +38,133 @@ export default function swiper() {
 					loop: true,
 				};
 				break;
+			case 'videos':
+				typeOptions = {
+					spaceBetween: 24,
+					slidesPerView: 1,
+					loop: true,
+					centeredSlides: true,
+				};
+				break;
 			case 'cards':
 				typeOptions = {
-					spaceBetween: 16,
-					slidesPerView: 1.2,
-					// centeredSlides: false,
+					spaceBetween: 24,
+					slidesPerView: 1.1,
 					breakpoints: {
 						768: {
-							slidesPerView: 1.8,
-							// centeredSlides: true,
+							slidesPerView: 2.6,
+						},
+						1024: {
+							slidesPerView: 3,
+						},
+						1280: {
+							slidesPerView: 3.6,
+						},
+						1440: {
+							slidesPerView: 3.8,
+						},
+						1600: {
+							slidesPerView: 4,
+						},
+					},
+				};
+				break;
+			case 'timelineCards':
+				typeOptions = {
+					spaceBetween: 24,
+					slidesPerView: 1.1,
+					breakpoints: {
+						768: {
+							slidesPerView: 1.6,
+						},
+						1024: {
+							slidesPerView: 1.6,
+						},
+						1280: {
+							slidesPerView: 2.4,
+						},
+						1440: {
+							slidesPerView: 2.4,
+						},
+						1600: {
+							slidesPerView: 3,
+						},
+					},
+				};
+				break;
+			case 'timelineCardsColSpan9':
+				typeOptions = {
+					spaceBetween: 24,
+					slidesPerView: 1.1,
+					breakpoints: {
+						768: {
+							slidesPerView: 2.4,
 						},
 						1024: {
 							slidesPerView: 2.6,
-							// centeredSlides: true,
 						},
 						1280: {
-							slidesPerView: 3.4,
-							// centeredSlides: true,
+							slidesPerView: 3.2,
 						},
-						// 1440: {
-						//   slidesPerView: 3.2,
-						//   // centeredSlides: true,
-						// },
-						// 1600: {
-						//   slidesPerView: 5,
-						//   // centeredSlides: true,
-						// },
+						1440: {
+							slidesPerView: 3.4,
+						},
+						1600: {
+							slidesPerView: 3.7,
+						},
+					},
+				};
+				break;
+			case 'newsCardsHome':
+				typeOptions = {
+					spaceBetween: 24,
+					slidesPerView: 1.2,
+					breakpoints: {
+						768: {
+							slidesPerView: 1.8,
+						},
+						1024: {
+							slidesPerView: 2.6,
+						},
+						1280: {
+							spaceBetween: 40,
+							slidesPerView: 3,
+						},
+						1440: {
+							spaceBetween: 40,
+							slidesPerView: 3,
+						},
+						1600: {
+							spaceBetween: 40,
+							slidesPerView: 3,
+						},
+					},
+				};
+				break;
+			case 'cardsColSpan9':
+				typeOptions = {
+					spaceBetween: 24,
+					slidesPerView: 1.1,
+					slidesPerGroup: 1,
+					slidesPerGroupSkip: 0,
+					loop: false,
+					watchOverflow: false,
+					breakpoints: {
+						768: {
+							slidesPerView: 1.8,
+						},
+						1024: {
+							slidesPerView: 2.6,
+						},
+						1280: {
+							slidesPerView: 2.8,
+						},
+						1440: {
+							slidesPerView: 3.4,
+						},
+						1600: {
+							slidesPerView: 3.8,
+						},
 					},
 				};
 				break;

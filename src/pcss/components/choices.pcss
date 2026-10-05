@@ -1,0 +1,167 @@
+.choices__inner {
+	width: 100%;
+	border-radius: 999px !important;
+	background-color: white !important;
+	border: 1px solid #969696;
+	height: 56px !important;
+	position: relative;
+}
+
+@media (min-width: 1320px) {
+	.choices__inner {
+		width: 280px !important;
+	}
+}
+
+@media (min-width: 1120px) {
+	.choices__inner {
+		width: 240px;
+	}
+}
+
+.choices {
+	margin-bottom: 0px;
+	box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.08);
+	border-radius: 999px;
+}
+
+.choices__list--single .choices__item {
+	padding-left: 20px !important;
+	color: var(--color-secondary);
+	font-size: 18px !important;
+	font-weight: 500 !important;
+	background-color: white !important;
+	margin-top: 1px !important;
+}
+
+.choices.is-open .choices__inner {
+	border-radius: 999px !important;
+}
+
+.choices:is([data-type*='select-multiple'], [data-type*='text']) .choices__button {
+	border: none;
+}
+
+.choices__list--multiple .choices__item[data-deletable] {
+	padding-right: 10px !important;
+	margin-left: 6px !important;
+}
+
+.choices__list--multiple .choices__item {
+	background: var(--color-secondary) !important;
+	border-radius: 8px;
+	display: none;
+}
+
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
+	padding: 8px !important;
+}
+
+.choices__input {
+	padding-left: 20px !important;
+	width: 400px !important;
+	color: var(--color-secondary);
+	font-size: 18px !important;
+	font-weight: 500 !important;
+	background-color: white !important;
+	margin-top: 1px !important;
+}
+
+.choices__list {
+	border-radius: 12px;
+	z-index: 100 !important;
+}
+
+.choices__list .choices__list--dropdown .is-active {
+	border-radius: 999px;
+	margin-top: 8px;
+}
+
+.choices::after {
+	border: 0;
+	position: absolute;
+	width: 24px !important;
+	height: 24px !important;
+	right: 24px !important;
+	top: 50% !important;
+	color: black;
+	transform: translateY(-50%);
+	content: '';
+	background: url('/dist/img/icons/chevron.svg') no-repeat center;
+	background-size: contain;
+}
+
+.choices[data-type*='select-one'].is-open::after {
+	margin-top: 4px !important;
+}
+
+.choices[data-type*='select-one']::after {
+	border: none !important;
+}
+
+.choices__item .choices__item--choice .choices__item--selectable {
+	padding-left: 20px !important;
+}
+
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
+	padding-left: 20px !important;
+	padding-top: 16px !important;
+	padding-bottom: 16px !important;
+	font-size: 16px !important;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list--dropdown .choices__item--selectable.is-selected,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-selected {
+	background-color: var(--color-secondary) !important;
+	color: white !important;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+	margin-top: 12px !important;
+}
+
+.choices__item
+	.choices__item--choice
+	.is-selected
+	.choices__placeholder
+	.choices__item--selectable {
+	display: none !important;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+	border-radius: 12px !important;
+}
+
+.choices__list--dropdown .choices__placeholder {
+	display: none;
+}
+
+.choices .choices__placeholder {
+	color: var(--color-secondary) !important;
+	opacity: 1;
+}
+
+.choices__input::placeholder {
+	color: var(--color-secondary) !important;
+	opacity: 1;
+}
+
+.choices[data-type*='select-one']::after,
+.choices[data-type*='select-one'].is-open::after {
+	top: 50% !important;
+	right: 24px !important;
+	margin-top: 0 !important;
+	transform: translateY(-50%) !important;
+
+	width: 24px;
+	height: 24px;
+	border: 0;
+	background: url('/dist/img/icons/chevron.svg') no-repeat center;
+	background-size: contain;
+}

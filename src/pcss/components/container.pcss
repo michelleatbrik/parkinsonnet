@@ -2,6 +2,7 @@
 	:root {
 		--container-width: 1390px;
 		--container-padding: var(--margin);
+		--container-padding-y: var(--margin-y);
 		--scrollbar: calc(100vw - 100%);
 		--viewport: calc(100vw - var(--scrollbar));
 		--fluid-area: max(
@@ -9,6 +10,7 @@
 			calc((var(--viewport) - var(--container-width)) / 2)
 		);
 		--margin: 1.25rem;
+		--margin-y: 2.5rem;
 		--gutter: 1.25rem;
 		--m: var(--margin);
 		--g: var(--gutter);
@@ -24,11 +26,11 @@
 		);
 		--column-width: calc(var(--columns-width-total-without-gutters) / var(--columns));
 
-		@media (min-width: theme(--breakpoint-md)) {
+		/* @media (min-width: theme(--breakpoint-md)) {
 			--columns: 12;
 			--margin: 1.5rem;
 			--container-padding: max(1.5rem, (1rem + 5vw));
-		}
+		} */
 	}
 }
 
@@ -39,4 +41,6 @@
 	margin-right: auto;
 	padding-left: var(--container-padding);
 	padding-right: var(--container-padding);
+	padding-top: var(--container-padding-y);
+	padding-bottom: var(--container-padding-y);
 }
