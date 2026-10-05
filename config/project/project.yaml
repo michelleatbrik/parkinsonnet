@@ -1,4 +1,4 @@
-dateModified: 1791225534
+dateModified: 1791226931
 elementSources:
   craft\elements\Entry:
     -
@@ -122,7 +122,6 @@ meta:
     4f69e3ac-43b6-46cc-acad-80ce9804fd2a: Homepage # Homepage
     5ec318c4-b6f4-4a56-92a5-f9b7edfbb635: Errors # Errors
     5fe4b921-1ad2-4cce-bf81-bb2fe1f766a3: 'Externe url' # Externe url
-    8cdbea37-6d9b-4922-b11e-97df6d3660b2: 'Standaard open source icons' # Standaard open source icons
     8d87bf9f-8546-434b-a971-6407e109f8aa: Blokken # Blokken
     8f439fc2-311f-4f45-99c6-c482d129d1fd: Tag # Tag
     10e2197c-c763-463e-998a-a704543fd784: 'Platte tekst' # Platte tekst
@@ -146,7 +145,6 @@ meta:
     54058ce4-020d-4535-9931-d69993419df7: Artikelen # Artikelen
     74716a14-5d9a-4002-bc77-51f38589d539: 'Artikel grid' # Artikel grid
     437963f6-fffc-4014-921d-e13fd7b2315f: 'Tekst (uitgebreid)' # Tekst (uitgebreid)
-    12976062-797d-4c3f-bba9-b08f9517d734: 'Standaard custom icons' # Standaard custom icons
     25165387-9136-4739-86cb-59a989b1c003: Afbeelding # Afbeelding
     a0934f1f-fd61-4f48-ae9a-3afec428cafe: 'Baseplate EN' # Baseplate EN
     a43b9a82-d36b-47f2-9c34-fb66898b6fd1: 'Titel formaat' # Titel formaat
@@ -183,21 +181,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: '2.0'
-  batch-actions:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  blitz:
-    edition: standard
-    enabled: true
-    licenseKey: FEKJVGWWK8G0MZZHEKCNR950
-    schemaVersion: 5.12.0
-    settings:
-      maxUriLength: 2048
-  buttonbox:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.0.0
   ckeditor:
     edition: standard
     enabled: true
@@ -206,15 +189,7 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.4.3
-  cp-clearcache:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   datastar:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  date-range:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
@@ -232,11 +207,6 @@ plugins:
     enabled: true
     licenseKey: JDD5CBCNB6O91IA0SP9ZFTF9
     schemaVersion: 1.0.0
-  icon-picker:
-    edition: standard
-    enabled: true
-    licenseKey: FBHOI0B2BXG644AOX3NIQW3E
-    schemaVersion: 1.2.3
   imager-x:
     edition: pro
     enabled: true
@@ -262,22 +232,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.1.1
-  maintenance-lock:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  markerio:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  minify:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  mjml:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   navigation:
     edition: standard
     enabled: true
@@ -295,11 +249,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  retour:
-    edition: standard
-    enabled: true
-    licenseKey: Z1Y02W1WOYVRWEW8MUG2D38C
-    schemaVersion: 3.0.12
   seomatic:
     edition: standard
     enabled: true
@@ -310,12 +259,6 @@ plugins:
     enabled: true
     licenseKey: LPR7ZW6ZVCH60M0IXMQBW14A
     schemaVersion: 1.0.2
-  statuspaginator:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-    settings:
-      token: $STATUSPAGINATOR_TOKEN
   video-utils:
     edition: standard
     enabled: true
