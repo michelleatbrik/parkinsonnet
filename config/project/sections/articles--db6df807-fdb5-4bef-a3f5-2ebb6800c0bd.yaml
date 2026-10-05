@@ -19,7 +19,7 @@ siteSettings:
     hasUrls: true
     template: _sections/articles/_entry.twig
     uriFormat: 'articles/{slug}'
-  edd82513-9dec-4df9-a2a1-300da844a91f: # Baseplate
+  edd82513-9dec-4df9-a2a1-300da844a91f: # Parkinsonnet
     enabledByDefault: true
     hasUrls: true
     template: _sections/articles/_entry.twig

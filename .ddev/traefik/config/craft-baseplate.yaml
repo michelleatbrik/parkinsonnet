@@ -1,0 +1,158 @@
+#ddev-generated
+# If you remove the ddev-generated line above you
+# are responsible for maintaining this file. DDEV will not then
+# update it, for example if you add `additional_hostnames`, etc.
+
+http:
+  routers:
+    craft-baseplate-web-80-http:
+      entrypoints:
+        - http-80
+      rule: HostRegexp(`^craft-baseplate\.ddev\.site$`)
+      
+      service: "craft-baseplate-web-80"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "craft-baseplate-redirectHttps"
+    craft-baseplate-web-8025-http:
+      entrypoints:
+        - http-8025
+      rule: HostRegexp(`^craft-baseplate\.ddev\.site$`)
+      
+      service: "craft-baseplate-web-8025"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "craft-baseplate-redirectHttps"
+    craft-baseplate-web-3000-http:
+      entrypoints:
+        - http-3001
+      rule: HostRegexp(`^craft-baseplate\.ddev\.site$`)
+      
+      service: "craft-baseplate-web-3000"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "craft-baseplate-redirectHttps"
+    craft-baseplate-web-3001-http:
+      entrypoints:
+        - http-3002
+      rule: HostRegexp(`^craft-baseplate\.ddev\.site$`)
+      
+      service: "craft-baseplate-web-3001"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "craft-baseplate-redirectHttps"
+    craft-baseplate-xhgui-80-http:
+      entrypoints:
+        - http-8143
+      rule: HostRegexp(`^craft-baseplate\.ddev\.site$`)
+      
+      service: "craft-baseplate-xhgui-80"
+      ruleSyntax: v3
+      tls: false
+      # middlewares:
+      #   - "craft-baseplate-redirectHttps"
+    
+    
+    
+    
+    
+    craft-baseplate-web-80-https:
+      entrypoints:
+        - http-443
+      rule: HostRegexp(`^craft-baseplate\.ddev\.site$`)
+      
+      service: "craft-baseplate-web-80"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    craft-baseplate-web-8025-https:
+      entrypoints:
+        - http-8026
+      rule: HostRegexp(`^craft-baseplate\.ddev\.site$`)
+      
+      service: "craft-baseplate-web-8025"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    craft-baseplate-web-3000-https:
+      entrypoints:
+        - http-3000
+      rule: HostRegexp(`^craft-baseplate\.ddev\.site$`)
+      
+      service: "craft-baseplate-web-3000"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    craft-baseplate-web-3001-https:
+      entrypoints:
+        - http-3001
+      rule: HostRegexp(`^craft-baseplate\.ddev\.site$`)
+      
+      service: "craft-baseplate-web-3001"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    
+    craft-baseplate-xhgui-80-https:
+      entrypoints:
+        - http-8142
+      rule: HostRegexp(`^craft-baseplate\.ddev\.site$`)
+      
+      service: "craft-baseplate-xhgui-80"
+      ruleSyntax: v3
+      
+      tls: true
+      
+    
+
+  middlewares:
+    craft-baseplate-redirectHttps:
+      redirectScheme:
+        scheme: https
+        permanent: true
+
+  services:
+    craft-baseplate-web-80:
+      loadbalancer:
+        servers:
+          - url: http://ddev-craft-baseplate-web:80
+        
+    craft-baseplate-web-8025:
+      loadbalancer:
+        servers:
+          - url: http://ddev-craft-baseplate-web:8025
+        
+    craft-baseplate-web-3000:
+      loadbalancer:
+        servers:
+          - url: http://ddev-craft-baseplate-web:3000
+        
+    craft-baseplate-web-3001:
+      loadbalancer:
+        servers:
+          - url: http://ddev-craft-baseplate-web:3001
+        
+    
+    
+    
+    
+    craft-baseplate-xhgui-80:
+      loadbalancer:
+        servers:
+          - url: http://ddev-craft-baseplate-xhgui:80
+        
+    
+    
+
+tls:
+  certificates:
+    - certFile: /mnt/ddev-global-cache/traefik/certs/craft-baseplate.crt
+      keyFile: /mnt/ddev-global-cache/traefik/certs/craft-baseplate.key

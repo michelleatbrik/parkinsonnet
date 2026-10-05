@@ -1,4 +1,4 @@
-dateModified: 1788944803
+dateModified: 1791225534
 elementSources:
   craft\elements\Entry:
     -
@@ -175,7 +175,7 @@ meta:
     dcaf6647-c88d-48cf-adf6-9b3e1d3150b1: Icoon # Icoon
     e325439d-f974-4c27-a2d9-2fe44cce12bb: Quote # Quote
     edb6d78c-27f5-4522-852d-2df53429bb71: Errors # Errors
-    edd82513-9dec-4df9-a2a1-300da844a91f: Baseplate # Baseplate
+    edd82513-9dec-4df9-a2a1-300da844a91f: Parkinsonnet # Parkinsonnet
     f9a50eaa-e4c7-4211-bfda-4797859199e9: 'Gedeelde content blokken' # Gedeelde content blokken
     f659e4e5-e885-4efe-918b-f9ea22bef550: 'Afbeelding (enkel)' # Afbeelding (enkel)
 plugins:
