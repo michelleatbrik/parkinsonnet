@@ -1,0 +1,71 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  a2ba59b8-1df9-49ae-bbf1-8842199a53ad:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-10-25T18:50:13+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: e7309098-a10e-4e0d-b987-535efbf1007b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-25T18:53:52+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: ea1d1d9d-cf47-49b6-b446-f180827ab5d2 # Kaarten
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c4ad27c8-7c9a-4144-a73e-4ffdbd16be67
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: 8c42c00f-62fe-42f0-a7fc-1f1972eccb9f
+        userCondition: null
+    thumbFieldKey: null
+handle: cards
+hasTitleField: true
+icon: cards-blank
+name: Kaarten
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

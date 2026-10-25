@@ -1,21 +1,37 @@
 {% set htmlTag = htmlTag is defined and htmlTag|length ? htmlTag : 'h2' %}
 {% set text = text is defined and text|length ? text : '' %}
 {% set size = size is defined and size|length ? size : 'medium' %}
-{% set color = color is defined and color|length ? color : 'text-primary' %}
+{% set color = color is defined and color|length ? color : 'default' %}
 {% set headingClasses = headingClasses is defined and headingClasses|length ? headingClasses : '' %}
+{% set colorClasses = '' %}
 {% set textTransform = textTransform is defined and textTransform|length ? textTransform : '' %}
-{% set baseClasses = 'font-extrabold block' %}
+{% set baseClasses = 'block font-heading font-extrabold' %}
 
 {% switch size %}
+	{% case 'extraSmall' %}
+		{% set baseClasses = baseClasses ~ ' ' ~ 'md:text-32/110 text-28/110 ' %}
 	{% case 'small' %}
-		{% set baseClasses = baseClasses ~ ' ' ~ 'leading-tight text-20 lg:text-24 xl:text-32' %}
+		{% set baseClasses = baseClasses ~ ' ' ~ 'md:text-40/110 text-24/110 ' %}
+	{% case 'submedium' %}
+		{% set baseClasses = baseClasses ~ ' ' ~ '2xl:text-56/110 lg:text-48/110 md:text-36/110 text-32/110 ' %}
 	{% case 'medium' %}
-		{% set baseClasses = baseClasses ~ ' ' ~ 'leading-tight text-28 md:text-32 lg:text-40' %}
+		{% set baseClasses = baseClasses ~ ' ' ~ 'lg:text-56/110 md:text-48/110 text-36/110' %}
 	{% case 'large' %}
-		{% set baseClasses = baseClasses ~ ' ' ~ 'leading-tight text-40 lg:text-60' %}
+		{% set baseClasses = baseClasses ~ ' ' ~ 'lg:text-64/110 md:text-56/110 text-40/110' %}
 {% endswitch %}
 
-{% set cssClasses = baseClasses ~ ' ' ~ color ~ ' ' ~ textTransform ~ ' ' ~ headingClasses %}
+{% switch color %}
+	{% case 'default' %}
+		{% set colorClasses = 'text-black' %}
+	{% case 'secondary' %}
+		{% set colorClasses = 'text-secondary' %}
+	{% case 'white' %}
+		{% set colorClasses = 'text-white' %}
+	{% case 'primary' %}
+		{% set colorClasses = 'text-primary' %}
+{% endswitch %}
+
+{% set cssClasses = baseClasses ~ ' ' ~ ' ' ~ textTransform ~ ' ' ~ headingClasses ~ ' ' ~ colorClasses %}
 
 {% if text %}
 	{{ tag(htmlTag, {

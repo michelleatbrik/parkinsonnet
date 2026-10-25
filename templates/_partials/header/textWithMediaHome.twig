@@ -1,0 +1,68 @@
+{% import '_macros/retcon.twig' as retcon %}
+
+{% set flagImage = flagImage|default(null) is not iterable ? (flagImage|default(null))|json_decode : flagImage %}
+{% set partyItems = partyItems|default([]) %}
+{% set relatedItems = relatedItems|default([]) %}
+
+<div class="relative bg-primary/15">
+    <div class="grid z-10 container lg:grid-cols-12 grid-cols-1 lg:gap-y-0 gap-y-32 gap-x-64">
+        
+        <figure class="lg:order-2 lg:col-span-6 relative aspect-[77-50] z-10">
+            {% if entry.singleVideo|length %}
+                {% set video = entry.singleVideo[0] %}
+                {% set url = video.url %}
+                {% if video.kind == 'json' %}
+                    {% set url = craft.embeddedAssets.get(video).url %}
+                {% endif %}
+                {% include '_components/molecules/videoPlayer/videoPlayer.twig' with {
+                    video: url,
+                    type: "popUp",
+                    transform: "heroTextWithMediaHome",
+                    posterImage: entry.singleImage|length ? entry.singleImage[0] : null,
+                    wrapperClasses: "rounded-3xl",
+                    controls: true,
+                } %}
+            {% elseif entry.singleImage|length %}
+                {% set image = entry.singleImage[0] %}
+                {% include "_components/atoms/image/image.twig" with {
+                    image: image,
+                    transform: "heroTextWithMediaHome",
+                    alt: image.alt,
+                    imageClasses: 'aspect-[77-50] w-full rounded-3xl',
+                    wrapperClasses: 'w-full'
+                } %}
+            {% endif %}
+        </figure>
+
+        <div class="w-full lg:w-[95%] lg:col-span-6 relative lg:order-1 h-full flex lg:items-start">
+            <div class="flex flex-col gap-24">
+                {% if entry.preHeading|length %}
+                    <div class="uppercase text-20/120 font-bold text-primary ">{{ entry.preHeading }}</div>
+                {% endif %}
+                <div class="flex flex-row gap-16 items-center">    
+                    {% include "_components/atoms/heading/heading.twig" with { htmlTag: "h1", text: entry.title, headingClasses: '', color: "black", size: "large", textTransform: ""  } only %}
+                </div>
+                {% if entry.intro|length %}
+                    <div>
+                        {{ retcon.intro(entry.intro) }}
+                    </div>
+                {% endif %}
+
+                {% if entry.buttons is defined and entry.buttons|length %}
+                    <div class="flex flex-row flex-wrap gap-x-16 mt-12">
+                        {% for button in entry.buttons %}
+                            {% include "_components/atoms/button/button.twig" with {
+                                htmlTag: 'a',
+                                url: button.url,
+                                text: button.text,
+                                target: button.target,
+                                icon: button.iconPicker,
+                                theme: 'white'
+                            } %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

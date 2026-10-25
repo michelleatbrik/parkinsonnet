@@ -1,4 +1,4 @@
-dateModified: 1791227853
+dateModified: 1792957359
 elementSources:
   craft\elements\Entry:
     -
@@ -120,11 +120,14 @@ meta:
     1bf7f973-b634-4c7e-adbc-e71f1a4c70f8: Artikelen # Artikelen
     4f08eaca-189d-42fc-9987-cbed19663296: 'Maximaal aantal berichten' # Maximaal aantal berichten
     4f69e3ac-43b6-46cc-acad-80ce9804fd2a: Homepage # Homepage
+    5b32607c-44dd-4704-93ab-43b9b6098b44: Kaarten # Kaarten
     5ec318c4-b6f4-4a56-92a5-f9b7edfbb635: Errors # Errors
     5fe4b921-1ad2-4cce-bf81-bb2fe1f766a3: 'Externe url' # Externe url
     8d87bf9f-8546-434b-a971-6407e109f8aa: Blokken # Blokken
+    8f1de83a-5ad7-4f76-8394-6aab1d2b4601: Kaart # Kaart
     8f439fc2-311f-4f45-99c6-c482d129d1fd: Tag # Tag
     10e2197c-c763-463e-998a-a704543fd784: 'Platte tekst' # Platte tekst
+    41acee22-6393-41e7-a771-e5fd28d42beb: Oefentherapeut # Oefentherapeut
     057c8c38-dc14-4f4f-8bc8-14a7232d3905: 'Gedeeld blok' # Gedeeld blok
     65bb950b-bf8c-46a5-b2d3-8fa38ea6f215: 'Contact Form' # Contact Form
     86dfc9bd-0363-4046-a638-26e03cd481da: 'Afbeelding (meerdere)' # Afbeelding (meerdere)
@@ -146,7 +149,7 @@ meta:
     74716a14-5d9a-4002-bc77-51f38589d539: 'Artikel grid' # Artikel grid
     437963f6-fffc-4014-921d-e13fd7b2315f: 'Tekst (uitgebreid)' # Tekst (uitgebreid)
     25165387-9136-4739-86cb-59a989b1c003: Afbeelding # Afbeelding
-    a0934f1f-fd61-4f48-ae9a-3afec428cafe: 'Baseplate EN' # Baseplate EN
+    a0934f1f-fd61-4f48-ae9a-3afec428cafe: 'Praktijk Driebergen' # Praktijk Driebergen
     a43b9a82-d36b-47f2-9c34-fb66898b6fd1: 'Titel formaat' # Titel formaat
     ae59b117-731a-4efe-83b6-33186b75a174: Evenementen # Evenementen
     b5da10b5-92de-4de6-8ac4-619c4d1eccc6: 'Slider type' # Slider type
@@ -172,8 +175,9 @@ meta:
     dbd31f29-8b03-46f8-819a-181826ff96c0: New # New
     dcaf6647-c88d-48cf-adf6-9b3e1d3150b1: Icoon # Icoon
     e325439d-f974-4c27-a2d9-2fe44cce12bb: Quote # Quote
+    ea1d1d9d-cf47-49b6-b446-f180827ab5d2: Kaarten # Kaarten
     edb6d78c-27f5-4522-852d-2df53429bb71: Errors # Errors
-    edd82513-9dec-4df9-a2a1-300da844a91f: Parkinsonnet # Parkinsonnet
+    edd82513-9dec-4df9-a2a1-300da844a91f: 'Parkinson trainingscentrum' # Parkinson trainingscentrum
     f9a50eaa-e4c7-4211-bfda-4797859199e9: 'Gedeelde content blokken' # Gedeelde content blokken
     f659e4e5-e885-4efe-918b-f9ea22bef550: 'Afbeelding (enkel)' # Afbeelding (enkel)
 plugins:
@@ -184,7 +188,7 @@ plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 5.6.0.0
+    schemaVersion: 5.0.0.1
   colour-swatches:
     edition: standard
     enabled: true
@@ -201,7 +205,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 435ASQ7ZIWT7QYQXDI5WQTZX
-    schemaVersion: 3.4.13
+    schemaVersion: 3.4.12
   hyper:
     edition: standard
     enabled: true

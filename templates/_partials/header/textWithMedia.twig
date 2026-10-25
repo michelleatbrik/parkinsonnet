@@ -1,0 +1,121 @@
+{% import '_macros/retcon.twig' as retcon %}
+
+{% set flagImage = flagImage|default(null) is not iterable ? (flagImage|default(null))|json_decode : flagImage %}
+{% set partyItems = partyItems|default([]) %}
+{% set relatedItems = relatedItems|default([]) %}
+
+{% set breadcrumbItems = [] %}
+{% for crumb in craft.navigation.breadcrumbs() %}
+	{% set breadcrumbItems = breadcrumbItems|merge([{title: crumb.title, url: crumb.url}]) %}
+{% endfor %}
+
+<section class="relative isolate overflow-x-clip lg:overflow-visible">
+    <div class="absolute top-0 -translate-y-1/2 lg:w-1/2 bg-primary/10 blur-3xl w-full h-800 rounded-full pointer-events-none"></div>
+    {{ inlineSvg('/patterns/stars-publication', 'text-primary absolute lg:-right-[460px] pointer-events-none -right-40 md:w-[95%] w-[125%] lg:-top-[400px] -top-[380px] z-0', { sanitize: true, namespace: true }) }}
+    <div class="grid container z-10 content-center md:grid-cols-12 grid-cols-1 gap-x-64 lg:pt-40  pt-22">
+        
+        {% include "_components/molecules/breadcrumbs/breadcrumbs.twig" with {
+            wrapperClasses: "md:col-span-12 col-span-1 relative z-20 lg:pb-0 pb-22",
+            breadcrumbItems: breadcrumbItems
+        } %} 
+        
+        <figure class="lg:order-2 md:col-span-6 relative aspect-6/5 z-10">
+            {% if entry.singleVideo|length %}
+                {% set video = entry.singleVideo[0] %}
+                {% set url = video.url %}
+                {% if video.kind == 'json' %}
+                    {% set url = craft.embeddedAssets.get(video).url %}
+                {% endif %}
+                {% include '_components/molecules/videoPlayer/videoPlayer.twig' with {
+                    video: url,
+                    type: "popUp",
+                    transform: "heroTextWithMedia",
+                    posterImage: entry.singleImage|length ? entry.singleImage[0] : null,
+                    wrapperClasses: "rounded-3xl",
+                    controls: true,
+                } %}
+            {% elseif entry.singleImage|length %}
+                {% set image = entry.singleImage[0] %}
+                {% include "_components/atoms/image/image.twig" with {
+                    image: image,
+                    transform: "heroTextWithMedia",
+                    alt: image.alt,
+                    imageClasses: 'aspect-6/5 w-full rounded-3xl',
+                    wrapperClasses: 'w-full'
+                } %}
+            {% endif %}
+            {% if partyItems|length %}
+                <div class="absolute right-16 top-16">
+                    <div class="flex flex-row gap-16">
+                        {% for party in partyItems %}
+                            <a href="{{ party.url }}" class="bg-white group relative shadow-[0_12px_24px_0_rgba(0,0,0,0.08)] group rounded-2xl flex justify-center items-center lg:p-16 p-12 aspect-square">
+                                {% include "_components/atoms/image/image.twig" with {
+                                    image: party.logo,
+                                    transform: "logoDefault",
+                                    alt: party.logo,
+                                    imageClasses: '',
+                                    wrapperClasses: 'lg:w-80 w-56 block group-hover:scale-115 transition ease-in-out duration-300'
+                                } %}
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        </figure>
+
+        <div class="w-full md:col-span-6 lg:pt-48 lg:mt-0 mt-40 relative lg:order-1 h-full flex lg:items-end">
+            <div class="flex flex-col gap-32">
+
+                {% if relatedItems %}
+                    <div class="flex gap-8 z-10 flex-row flex-wrap">
+                        {% for relatedItem in relatedItems|slice(0, 2) %}
+                            <a href="{{relatedItem.url}}" class="block -mb-16 bg-secondary hover:bg-primary font-medium rounded-lg text-12/140 text-white px-16 py-8">{{relatedItem.title}}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <div class="flex flex-row gap-16 items-center">    
+                    {% include "_components/atoms/heading/heading.twig" with {
+                        htmlTag: "h1",
+                        text: entry.title,
+                        variant: "medium",
+                        textTransform: "uppercase",
+                        headingClasses: "",
+                    } %}
+
+                    {% if flagImage %}
+                        {% include "_components/atoms/image/image.twig" with {
+                            image: flagImage[0],
+                            transform: "aspect-4/3",
+                            alt: flagImage.alt,
+                            imageClasses: 'aspect-4/3 border border-[#E5E5E5]',
+                            wrapperClasses: 'w-40'
+                        } %}
+                    {% endif %}
+                </div>
+
+
+                {% if entry.intro|length %}
+                    <div class="">
+                        {{ retcon.intro(entry.intro) }}
+                    </div>
+                {% endif %}
+
+                {% if entry.buttons is defined and entry.buttons|length %}
+                    <div class="flex flex-row flex-wrap gap-x-16 mt-16">
+                        {% for button in entry.buttons %}
+                            {% include "_components/atoms/button/button.twig" with {
+                                htmlTag: 'a',
+                                url: button.url,
+                                text: button.text,
+                                target: button.target,
+                                icon: button.iconPicker,
+                                theme: 'primary'
+                            } %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

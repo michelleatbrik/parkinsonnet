@@ -1,0 +1,125 @@
+@theme inline {
+	/* Surface */
+	--color-surface: var(--color-black-100);
+	--color-surface-foreground: var(--color-black-1000);
+
+	--color-surface-inverse: var(--color-black-1000);
+
+	/* Text */
+	--color-text: var(--color-black-1000);
+	--color-text-inverse: var(--color-white-1000);
+
+	/* Border */
+	--color-border: var(--color-black-100);
+
+	/* Action  */
+	--color-action: var(--color-brand-300);
+	--color-action-hover: var(--color-brand-300);
+	--color-action-foreground: var(--color-white-1000);
+	--color-action-foreground-hover: var(--color-black-1000);
+
+	/* Accent */
+	--color-accent: var(--color-brand-600);
+	--color-accent-foreground: var(--color-black-900);
+
+	/* Alert */
+	--color-info: var(--color-brand-300);
+	--color-info-foreground: var(--color-black-900);
+
+	--color-success: #ddf3e4;
+	--color-success-foreground: #245c38;
+
+	--color-warning: #fff1bf;
+	--color-warning-foreground: #6a4a00;
+
+	--color-error: #ffe0da;
+	--color-error-foreground: #7a271a;
+
+	/* Typography — Fonts */
+	--font-body: var(--font-helvetica-now-display);
+	--font-heading: var(--font-helvetica-now-display);
+
+	/* Typography — Headings */
+	/* also possible with letter-spacing --text-heading-2xl--letter-spacing: -0.03em; and  */
+
+	--text-heading-3xl: var(--text-72);
+	--text-heading-3xl--line-height: var(--leading-100);
+	--text-heading-3xl--font-weight: 700;
+
+	--text-heading-2xl: var(--text-48);
+	--text-heading-2xl--line-height: var(--leading-90);
+
+	--text-heading-xl: var(--text-40);
+	--text-heading-xl--line-height: var(--leading-100);
+	--text-heading-xl--font-weight: 700;
+
+	--text-heading-lg: var(--text-36);
+	--text-heading-lg--line-height: var(--leading-110);
+
+	--text-heading-md: var(--text-32);
+	--text-heading-md--line-height: var(--leading-100);
+	--text-heading-md--font-weight: 700;
+
+	--text-heading-sm: var(--text-24);
+	--text-heading-sm--line-height: var(--leading-100);
+	--text-heading-sm--font-weight: 700;
+
+	/* Typography — Body */
+
+	--text-body-xl: var(--text-22);
+	--text-body-xl--line-height: var(--leading-160);
+
+	--text-body-lg: var(--text-20);
+	--text-body-lg--line-height: var(--leading-160);
+
+	--text-body-md: var(--text-18);
+	--text-body-md--line-height: var(--leading-160);
+
+	--text-body-sm: var(--text-16);
+	--text-body-sm--line-height: var(--leading-160);
+
+	/* Typography — Label */
+
+	--text-label-md: var(--text-18);
+	--text-label-md--line-height: var(--leading-90);
+	--text-label-md--font-weight: 500;
+
+	--text-label-sm: var(--text-16);
+	--text-label-sm--line-height: var(--leading-90);
+	--text-label-sm--font-weight: 500;
+
+	/* Typography — Button */
+	--text-button-md: var(--text-20);
+	--text-button-md--line-height: var(--leading-90);
+	--text-button-md--font-weight: 500;
+
+	--radius-button: var(--shape-radius-button);
+	--radius-card: var(--shape-radius-card);
+	--radius-block: var(--shape-radius-block);
+	--radius-media: var(--shape-radius-media);
+	--radius-label: var(--shape-radius-label);
+
+	/* Themes option*/
+
+	[data-theme='light'] {
+		--color-surface: var(--color-white);
+		--color-text: var(--color-black);
+		--color-action: var(--color-brand-300);
+	}
+}
+
+[data-shape='default'] {
+	--shape-radius-button: 0;
+	--shape-radius-card: 0;
+	--shape-radius-block: 0;
+	--shape-radius-media: 0;
+	--shape-radius-label: 0rem;
+}
+
+[data-shape='rounded'] {
+	--shape-radius-button: 9999px;
+	--shape-radius-card: 16px;
+	--shape-radius-block: 32px;
+	--shape-radius-media: 16px;
+	--shape-radius-label: 8px;
+}

@@ -1,0 +1,63 @@
+{% import '_macros/retcon.twig' as retcon %}
+
+<section class="container relative grid content-center md:grid-cols-12 grid-cols-1 gap-x-64 lg:gap-y-0 gap-y-40 pt-0">
+    <figure class="lg:order-2 md:col-span-6">
+        {% if entry.singleVideo|length %}
+            {% set video = entry.singleVideo[0] %}
+            {% set url = video.url %}
+            {% if video.kind == 'json' %}
+                {% set url = craft.embeddedAssets.get(video).url %}
+            {% endif %}
+            {% include '_components/molecules/videoPlayer/videoPlayer.twig' with {
+                video: url,
+                type: "popUp",
+                transform: "aspect-1/1",
+                posterImage: entry.singleImage|length ? entry.singleImage[0] : null,
+                wrapperClasses: "rounded-3xl",
+                controls: true,
+            } %}
+        {% elseif entry.singleImage|length %}
+            {% set image = entry.singleImage[0] %}
+            {% include "_components/atoms/image/image.twig" with {
+                image: image,
+                transform: "aspect-1/1",
+                alt: image.alt,
+                imageClasses: 'aspect-1/1 w-full rounded-3xl',
+                wrapperClasses: 'w-full'
+            } %}
+        {% endif %}
+    </figure>
+
+    <div class="w-full md:col-span-6 relative lg:order-1 h-full flex items-center">
+        <div class="flex flex-col gap-32">
+
+                {% include "_components/atoms/heading/heading.twig" with {
+                    htmlTag: "h1",
+                    text: entry.title,
+                    variant: "medium",
+                    headingClasses: "",
+                } %}
+
+                {% if entry.intro|length %}
+                    <div class="">
+                        {{ retcon.intro(entry.intro) }}
+                    </div>
+                {% endif %}
+
+                {% if entry.buttons is defined and entry.buttons|length %}
+                    <div class="flex flex-row flex-wrap gap-x-16 mt-16">
+                        {% for button in entry.buttons %}
+                            {% include "_components/atoms/button/button.twig" with {
+                                htmlTag: 'a',
+                                url: button.url,
+                                text: button.text,
+                                target: button.target,
+                                icon: button.iconPicker,
+                                theme: 'primary'
+                            } %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+        </div>
+    </div>
+</section>

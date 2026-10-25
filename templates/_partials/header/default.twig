@@ -1,0 +1,84 @@
+{% import '_macros/retcon.twig' as retcon %}
+
+{% set headingClasses = headingClasses|default("") %}
+{% set intro = intro|default("") %}
+
+{% set flagImage = flagImage|default(null) is not iterable ? (flagImage|default(null))|json_decode : flagImage %}
+{% set partyItems = partyItems|default([]) %}
+
+{% set breadcrumbItems = [] %}
+{% for crumb in craft.navigation.breadcrumbs() %}
+	{% set breadcrumbItems = breadcrumbItems|merge([{title: crumb.title, url: crumb.url}]) %}
+{% endfor %}
+
+<div class="relative w-full z-0">
+    <div class="absolute top-0 -translate-y-1/2 lg:w-1/2 bg-primary/10 blur-3xl w-full h-800 rounded-full pointer-events-none"></div>
+
+    <div class="container py-0 lg:pt-40 pt-22 flex flex-col lg:gap-40 gap-28">
+
+        {% include "_components/molecules/breadcrumbs/breadcrumbs.twig" with {
+            wrapperClasses: "lg:col-span-12 col-span-1 relative z-20",
+            breadcrumbItems: breadcrumbItems
+        } %}
+
+        <div class="flex flex-col gap-16">
+
+            {% if partyItems|length %}
+                <div class="flex flex-row gap-16">
+                    {% for party in partyItems %}
+                        <a href="{{ party.url }}" class="bg-white group relative shadow-[0_12px_24px_0_rgba(0,0,0,0.08)] group rounded-2xl flex justify-center items-center lg:p-20 p-16 aspect-square">
+                            {% include "_components/atoms/image/image.twig" with {
+                                image: party.logo,
+                                transform: "logoDefault",
+                                alt: party.logo,
+                                imageClasses: '',
+                                wrapperClasses: 'lg:w-56 w-40 block group-hover:scale-115 transition ease-in-out duration-300'
+                            } %}
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div class="flex flex-row gap-16 items-center lg:w-2/3">
+                {% include "_components/atoms/heading/heading.twig" with {
+                    htmlTag: "h1",
+                    text: title,
+                    textTransform: "uppercase",
+                    size: "medium",
+                    headingClasses: headingClasses,
+                } %}
+
+                {% if flagImage %}
+                    {% include "_components/atoms/image/image.twig" with {
+                        image: flagImage[0],
+                        transform: "aspect-4/3",
+                        alt: flagImage.alt,
+                        imageClasses: 'aspect-4/3 border border-[#E5E5E5]',
+                        wrapperClasses: 'w-40'
+                    } %}
+                {% endif %}
+            </div>
+
+            {% if intro|length %}
+                <div class="lg:w-2/3">
+                    {{ retcon.intro(intro) }}
+                </div>
+            {% endif %}
+        </div>
+
+        {% if entry.buttons is defined and entry.buttons|length %}
+            <div class="flex flex-row flex-wrap gap-x-16">
+                {% for button in entry.buttons %}
+                    {% include "_components/atoms/button/button.twig" with {
+                        htmlTag: 'a',
+                        url: button.url,
+                        text: button.text,
+                        target: button.target,
+                        icon: button.iconPicker,
+                        theme: 'primary'
+                    } %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>

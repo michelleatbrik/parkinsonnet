@@ -9,12 +9,12 @@ minAuthors: 1
 name: 'Artikel type'
 propagationMethod: all
 siteSettings:
-  a0934f1f-fd61-4f48-ae9a-3afec428cafe: # Baseplate EN
+  a0934f1f-fd61-4f48-ae9a-3afec428cafe: # Praktijk Driebergen
     enabledByDefault: true
     hasUrls: false
     template: null
     uriFormat: null
-  edd82513-9dec-4df9-a2a1-300da844a91f: # Parkinsonnet
+  edd82513-9dec-4df9-a2a1-300da844a91f: # Parkinson trainingscentrum
     enabledByDefault: true
     hasUrls: false
     template: null

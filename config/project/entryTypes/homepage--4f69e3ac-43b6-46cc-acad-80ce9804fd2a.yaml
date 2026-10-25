@@ -9,6 +9,23 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2026-10-05T19:37:16+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c798cdf5-723e-4cdc-8ac1-6c527b1a14a6 # Bovenkop
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5db67950-01e1-4645-ae22-02aff3c8c242
+            userCondition: null
+            warning: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -36,6 +53,57 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-10-05T19:37:16+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d544c7a1-06b0-46c7-b2a6-8987f2c6bd84 # Tekst (simpel)
+            handle: intro
+            instructions: null
+            label: Intro
+            oldFieldUid: d544c7a1-06b0-46c7-b2a6-8987f2c6bd84 # Tekst (simpel)
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 19e76aed-46f0-4fba-9906-f6d47859363a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-05T19:37:16+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: f659e4e5-e885-4efe-918b-f9ea22bef550 # Afbeelding (enkel)
+            handle: null
+            instructions: null
+            label: Afbeelding
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 841652ee-c97f-4f76-915d-d41f68c757d7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-05T19:37:16+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 18915ee7-c649-4733-ab93-d96d10d1b46a # Video
+            handle: singleVideo
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2c4670c2-794c-4af8-9ded-545b71004852
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 372dfb5a-ed9c-4a0d-b8a7-04e5a1e281e3
         userCondition: null
@@ -51,6 +119,7 @@ fieldLayouts:
             handle: null
             instructions: null
             label: null
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -73,6 +142,7 @@ fieldLayouts:
             handle: null
             instructions: null
             label: null
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

@@ -43,6 +43,7 @@
             <div id="app">
                 <main id="main" class="flex-[1_0_auto]">
                     <a id="skipToContent"></a>
+                    {% include "_partials/menu.twig" ignore missing with { entry: entry is defined ? entry : null } %}
                     {% block html %}
                     {% endblock %}
 

@@ -1,37 +1,74 @@
 {%- macro default(field) -%}
     {{ field | retcon([
-        ['attr', 'h2', { class: 'font-semibold text-primary text-32 md:text-36 leading-120 mb-6' }],
-        ['attr', 'h3', { class: 'font-semibold text-primary text-24 md:text-28 leading-120 mb-6' }],
-        ['attr', 'h4', { class: 'font-semibold text-primary text-18 md:text-22 leading-120 mb-6' }],
-        ['attr', 'a', { class: 'text-primary underline underline-offset-2 hover:opacity-50' }],
-        ['attr', 'strong', { class: 'font-semibold' }],
-        ['attr', 'p', { class: 'mb-6 text-16 leading-160 opacity-80 text-16 md:text-18' }],
-        ['attr', 'ul', { class: 'mb-6 flex flex-col gap-4' }],
-        ['attr', 'ul li', { class: 'pl-8 text-16 md:text-18 leading-16 relative before:absolute before:content-[""] before:w-5 before:h-4 before:top-2 before:left-0 before:bg-check-secondary before:bg-no-repeat before:bg-contain' }],
+        ['attr', 'h2', { class: 'font-extrabold font-heading text-black lg:text-40/110 md:text-40/110 text-36/110 mb-16' }],
+        ['attr', 'h3', { class: 'font-extrabold font-heading text-black text-28/120 md:text-32/120 mb-16' }],
+        ['attr', 'h4', { class: 'font-extrabold font-heading  text-black text-24/120 md:text-28/120 mb-16' }],
+        ['attr', 'a', { class: 'text-primary underline underline-offset-4 hover:opacity-50' }],
+        ['attr', 'strong', { class: 'font-bold' }],
+        ['attr', 'p', { class: 'mb-24 last:mb-0 text-secondary lg:text-22/180 text-18/180' }],
+        ['attr', 'ul', { class: 'mb-24 flex flex-col gap-4' }],
+        ['attr', 'ul li', { class: 'pl-8 ml-20 lg:text-22/180 text-18/180 relative list-disc'  }],
         ['attr', 'ol', { class: 'list-decimal pl-5 mb-6 flex flex-col gap-4' }],
-        ['attr', 'ol li', { class: 'pl-3 text-16 md:text-18 leading-160' }],
-        ['wrap', 'table', '.overflow-x-auto' ],
-        ['attr', 'table', { class: 'mb-6' }],
-        ['attr', 'th, td', { class: 'text-left text-16 md:text-18 leading-160 pr-4' }],
-        ['attr', 'blockquote', { class: 'p-4 my-4 bg-gray-50 border-l-4 border-gray-300 text-16 md:text-18' }],
+        ['attr', 'ol li', { class: 'pl-3 lg:text-22/180 text-18/180' }],
     ]) }}
 {%- endmacro -%}
 
-{%- macro darkBg(field) -%}
-	{{ field | retcon([
-        ['attr', 'h2', { class: 'text-white font-semibold text-32 md:text-36 leading-120 mb-6' }],
-        ['attr', 'h3', { class: 'text-white font-semibold text-24 md:text-28 leading-120 mb-6' }],
-        ['attr', 'h4', { class: 'text-white font-semibold text-18 md:text-22 leading-120 mb-6' }],
-        ['attr', 'a', { class: 'text-white underline underline-offset-2 hover:opacity-50' }],
+
+{%- macro richTextSimple(field) -%}
+    {{ field | retcon([
+        ['attr', 'h2', { class: 'font-semibold text-black text-32 md:text-36 leading-120 mb-6' }],
+        ['attr', 'h3', { class: 'font-semibold text-black text-24 md:text-28 leading-120 mb-6' }],
+        ['attr', 'h4', { class: 'font-semibold text-black text-18 md:text-22 leading-120 mb-6' }],
+        ['attr', 'a', { class: 'text-primary underline underline-offset-4 hover:opacity-50' }],
         ['attr', 'strong', { class: 'font-semibold' }],
-        ['attr', 'p', { class: 'text-white mb-6 text-16 leading-160 opacity-80 text-16 md:text-18' }],
-        ['attr', 'ul', { class: 'mb-6 flex flex-col gap-4' }],
-        ['attr', 'ul li', { class: 'text-white pl-8 text-16 md:text-18 leading-16 relative before:absolute before:content-[""] before:w-5 before:h-4 before:top-2 before:left-0 before:bg-check-white before:bg-no-repeat before:bg-contain' }],
-        ['attr', 'ol', { class: 'list-decimal pl-5 mb-6 flex flex-col gap-4' }],
-        ['attr', 'ol li', { class: 'text-white pl-3 text-16 md:text-18 leading-160' }],
+        ['attr', 'p', { class: 'mb-16 last:mb-0 text-secondary lg:text-22/180 text-18/180' }],
+    ]) }}
+{%- endmacro -%}
+
+
+{%- macro richTextAdvanced(field) -%}
+    {{ field | retcon([
+        ['attr', 'h2', { class: 'font-extrabold font-heading text-black 2xl:text-48/110 lg:text-48/110 md:text-40/110 text-36/110 mb-16' }],
+        ['attr', 'h3', { class: 'font-extrabold font-heading text-black text-28/120 md:text-32/120 mb-16' }],
+        ['attr', 'h4', { class: 'font-extrabold font-heading  text-black text-24/120 md:text-28/120 mb-16' }],
+        ['attr', 'a', { class: 'text-primary underline underline-offset-4 hover:opacity-50' }],
+        ['attr', 'strong', { class: 'font-semibold' }],
+        ['attr', 'p', { class: 'mb-16 last:mb-0 text-secondary lg:text-22/180 text-18/180' }],
+        ['attr', 'img', { class: 'w-full my-40 rounded-2xl' }],
+        ['attr', 'iframe', { class: 'w-full my-40 rounded-2xl aspect-16/9' }],
+        ['attr', 'ul', { class: 'mb-6 text-secondary flex flex-col gap-4' }],
+        ['attr', 'ul li', { class: 'pl-8 ml-20 lg:text-22/180 text-18/180 relative list-disc' }],
+        ['attr', 'ol', { class: 'list-decimal text-secondary pl-5 mb-6 flex flex-col gap-4' }],
+        ['attr', 'ol li', { class: 'pl-3 lg:text-22/180 text-18/180' }],
         ['wrap', 'table', '.overflow-x-auto' ],
         ['attr', 'table', { class: 'mb-6' }],
-        ['attr', 'th, td', { class: 'text-white text-left text-16 md:text-18 leading-160 pr-4' }],
-        ['attr', 'blockquote', { class: 'text-white p-4 my-4 bg-primary border-l-4 border-secondary text-16 md:text-18' }],
+        ['attr', 'th, td', { class: 'text-left lg:text-22/180 text-18/180 pr-4' }],
+        ['attr', 'blockquote', { class: 'p-16 my-24 bg-white border-l-8 border-primary !text-secondary lg:text-22/180 text-18/180' }],
+        ['attr', 'blockquote p', { class: 'text-secondary' }],
+        ['attr', 'blockquote a', { class: 'underline underline-offset-2 hover:text-primary' }],
+    ]) }}
+{%- endmacro -%}
+
+{%- macro defaultWhite(field) -%}
+	{{ field | retcon([
+        ['attr', 'a', { class: 'text-white underline font-text font-sembibold underline-offset-4 hover:opacity-75' }],
+        ['attr', 'strong', { class: 'font-bold' }],
+        ['attr', 'p', { class: 'mb-16 last:mb-0 font-text text-white/90 lg:text-22/180 text-18/180 font-sembibold' }],
+    ]) }}
+{%- endmacro -%}
+
+{%- macro intro(field) -%}
+	{{ field | retcon([
+        ['attr', 'a', { class: 'text-black lg:text-22/180 text-18/180 underline underline-offset-4 hover:opacity-75' }],
+        ['attr', 'strong', { class: 'font-bold' }],
+        ['attr', 'p', { class: 'mb-16 last:mb-0 text-black lg:text-22/180 text-18/180' }],
+    ]) }}
+{%- endmacro -%}
+
+{%- macro introWhite(field) -%}
+	{{ field | retcon([
+        ['attr', 'a', { class: 'text-white/90 lg:text-22/180 text-18/180 underline underline-offset-4 hover:opacity-75' }],
+        ['attr', 'strong', { class: 'font-bold' }],
+        ['attr', 'p', { class: 'mb-16 last:mb-0 text-white/90 lg:text-22/180 text-18/180' }],
     ]) }}
 {%- endmacro -%}

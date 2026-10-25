@@ -1,0 +1,14 @@
+{% import '_macros/retcon.twig' as retcon %}
+
+<div class="container bg-primary/10">
+    <div class="grid grid-cols-3  gap-32">
+        {% for card in block.cards.all() %}
+            <div class="bg-white p-32 rounded-xl flex flex-col gap-16">
+                <div class="text-28/120 font-bold">{{ card.title }}</div>
+                {% if card.text %}
+                    {{ retcon.default(card.text) }}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>

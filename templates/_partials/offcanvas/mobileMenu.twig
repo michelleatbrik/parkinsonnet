@@ -1,0 +1,136 @@
+{% embed '_partials/offcanvas.twig' with { xdata: 'mobileMenu' } %}
+	{% block content %}
+
+		<div class="pt-[84px] flex flex-col justify-between" x-data="{ childrenMenuOpen: false, active: null }">
+			<ul class="flex flex-col" 
+				x-show="!childrenMenuOpen" 
+				x-transition:enter="transition ease-out duration-300"
+				x-transition:enter-start="opacity-0 -translate-x-2"
+				x-transition:enter-end="opacity-100 translate-x-0"
+				x-transition:leave="transition ease-in duration-150"
+				x-transition:leave-start="opacity-100 translate-x-0"
+				x-transition:leave-end="opacity-0 -translate-x-2"
+			>
+				{% for item in mainMenu %}
+					<li class="border-b py-24 border-[#E5E5E5]">
+						<div class="flex px-24 text-18/120 items-center justify-between w-full">
+							{% if item.children|length %}
+								<button type="button" class="w-full flex items-center justify-between" @click="childrenMenuOpen = true; active = {{ loop.index }}" aria-label="Open submenu {{ item.title }}">
+									{{ item.title }}
+									{{ inlineSvg('icons/chevron', 'size-24 border-black -rotate-90') }}
+								</button>
+							{% else %}
+								<a class="cursor-pointer" href="{{ item.url }}">
+									{{ item.title }}
+								</a>
+							{% endif %}
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+
+			<div x-show="childrenMenuOpen" 
+				x-transition:enter="transition ease-out delay-300 duration-200"
+				x-transition:enter-start="opacity-0 translate-x-2"
+				x-transition:enter-end="opacity-100 translate-x-0"
+			>
+
+				{% for item in mainMenu %}
+					{% if item.children|length %}
+						<div x-show="active === {{ loop.index }}" style="display:none;">
+							<div @click="childrenMenuOpen = false" class="px-24 pb-24 mt-20 flex flex-row text-18/120 items-center gap-4 font-bold text-20 border-b border-[#E5E5E5]">
+								{{ inlineSvg('icons/chevron', 'size-24 border-black rotate-90') }}
+								{{ item.title }}
+							</div>
+
+							<ul class="flex flex-col">
+								{% for child in item.children %}
+									<li class="border-b py-16 border-[#E5E5E5]">
+										<a href="{{child.url}}" class=" flex-col flex px-24 py-12 hover:text-blue">
+											<span class="block text-18/120">{{child.title}}</span>
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+
+			<div x-show="!childrenMenuOpen" class="w-full relative flex flex-col gap-28 mt-36 px-24">
+                {% if general.ctaMenu is defined and general.ctaMenu|length %}
+                    {% set button = general.ctaMenu[0] %}
+                    {% include "_components/atoms/button/button.twig" with {
+                        htmlTag: 'a',
+                        url: button.url,
+                        text: button.text,
+                        target: button.target,
+                        icon: button.iconPicker,
+                        theme: 'primary',
+                    } %}
+                {% endif %}
+
+				<div x-data="{ languageDropdownIsOpen: false }" class="relative">
+					<div @click.outside="languageDropdownIsOpen = false" @click="languageDropdownIsOpen = !languageDropdownIsOpen" :class="languageDropdownIsOpen ? 'text-blue' : 'text-neutral-800' " class="cursor-pointer hover:text-blue flex items-center flex-row gap-1">
+						{{currentSite.language|upper}}
+						{{ inlineSvg('icons/chevron', 'size-24 border-[#262626]' ) }}
+					</div>
+					<div
+						x-cloak
+						x-transition:enter="duration-300"
+						x-transition:enter-start="opacity-0"
+						x-transition:enter-end="opacity-100"
+						x-transition:leave="duration-300"
+						x-transition:leave-start="opacity-100"
+						x-transition:leave-end="opacity-0"
+						x-show="languageDropdownIsOpen"
+						class="absolute w-max shadow-[0_4px_6px_-4px_rgba(0,0,0,0.06),0_10px_15px_-3px_rgba(0,0,0,0.06)] top-36 border gap-8 py-12 px-20 flex flex-col items-start border-[#E5E5E5] rounded-lg left-24  bg-white"
+					>
+						{% set currentSiteId = craft.app.sites.currentSite.id %}
+
+						{% for site in sites %}
+							{% if site.hasUrls and site.id != currentSiteId %}
+								{% set localeUrl = currentUrl %}
+								{% set currentEntry = entry ?? null %}
+								{% set currentCategory = category ?? null %}
+
+								{% if currentEntry %}
+									{% set localizedEntry = craft.entries()
+										.id(currentEntry.canonicalId ?? currentEntry.id)
+										.siteId(site.id)
+										.status(null)
+										.one()
+									%}
+
+									{% if localizedEntry %}
+										{% set localeUrl = localizedEntry.url ~ (qs ? '?' ~ qs : '') %}
+									{% endif %}
+
+								{% elseif currentCategory %}
+									{% set localizedCategory = craft.categories()
+										.id(currentCategory.canonicalId ?? currentCategory.id)
+										.siteId(site.id)
+										.status(null)
+										.one()
+									%}
+
+									{% if localizedCategory %}
+										{% set localeUrl = localizedCategory.url ~ (qs ? '?' ~ qs : '') %}
+									{% endif %}
+								{% endif %}
+
+								<a class="text-black font-medium text-16/120 hover:text-primary" href="{{ localeUrl }}" lang="{{ site.language }}">
+									{{ site.language|upper }}
+								</a>
+							{% endif %}
+						{% endfor %}
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+			
+	{% endblock %}
+{% endembed %}
