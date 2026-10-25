@@ -75,7 +75,15 @@ export default defineConfig(({ command }) => ({
 		host: '0.0.0.0',
 		port: 3000,
 		strictPort: true,
+
+		allowedHosts: [
+			'parkinsontrainingscentrum.ddev.site',
+			'praktijkdriebergen.ddev.site',
+			'oefentherapeut.ddev.site',
+		],
+
 		origin: `${process.env.DDEV_PRIMARY_URL}:3000`,
+
 		cors: {
 			origin: /https?:\/\/([A-Za-z0-9\-.]+)?(\.ddev\.site)(?::\d+)?$/,
 		},

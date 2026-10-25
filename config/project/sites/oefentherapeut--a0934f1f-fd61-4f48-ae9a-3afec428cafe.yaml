@@ -1,9 +1,9 @@
-baseUrl: $PRAKTIJK_DRIEBERGEN_SITE_URL
+baseUrl: $OEFENTHERAPEUT_SITE_URL
 enabled: '1'
-handle: praktijkDriebergen
+handle: oefentherapeut
 hasUrls: true
-language: nl-NL
-name: 'Praktijk Driebergen'
+language: nl
+name: Oefentherapeut
 primary: false
 siteGroup: c3833bf8-fd94-41d8-9ffc-edd0fa60fc6a # Baseplate
 sortOrder: 2

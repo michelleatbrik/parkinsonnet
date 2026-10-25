@@ -1,19 +1,28 @@
 @theme inline {
-	/* Primitives: color  */
-	/* --color-brand-100: #f0fdf4;
-    --color-brand-300: #86efac;
-    --color-brand-600: #16a34a; */
-
-	/* Trainingscentrum  */
-
+	/* Trainingscentrum */
 	--color-brand-100-trainingscentrum: #3babe1;
 	--color-brand-300-trainingscentrum: #cbd5e1;
 	--color-brand-600-trainingscentrum: #3babe1;
 
-	--color-black-100: #f4f4f5;
-	--color-black-300: #cccccc;
-	--color-black-900: #0c0c09;
-	--color-black-1000: #000;
+	/* Oefentherapie */
+	--color-brand-100-oefentherapie: #17a3e6;
+	--color-brand-300-oefentherapie: #7dcc49;
+	--color-brand-600-oefentherapie: #fa921b;
 
-	--color-white-1000: #fff;
+	/* Semantics */
+	--color-primary: var(--primary);
+	--color-secondary: var(--secondary);
+	--color-action: var(--action);
+}
+
+[data-theme='default'] {
+	--primary: var(--color-brand-100-trainingscentrum);
+	--secondary: var(--color-brand-300-trainingscentrum);
+	--action: var(--color-brand-600-trainingscentrum);
+}
+
+[data-theme='oefentherapeut'] {
+	--primary: var(--color-brand-100-oefentherapie);
+	--secondary: var(--color-brand-300-oefentherapie);
+	--action: var(--color-brand-600-oefentherapie);
 }

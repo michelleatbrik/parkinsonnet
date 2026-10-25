@@ -1,4 +1,4 @@
-dateModified: 1792957359
+dateModified: 1792961412
 elementSources:
   craft\elements\Entry:
     -
@@ -127,7 +127,7 @@ meta:
     8f1de83a-5ad7-4f76-8394-6aab1d2b4601: Kaart # Kaart
     8f439fc2-311f-4f45-99c6-c482d129d1fd: Tag # Tag
     10e2197c-c763-463e-998a-a704543fd784: 'Platte tekst' # Platte tekst
-    41acee22-6393-41e7-a771-e5fd28d42beb: Oefentherapeut # Oefentherapeut
+    41acee22-6393-41e7-a771-e5fd28d42beb: 'Praktijk Driebergen' # Praktijk Driebergen
     057c8c38-dc14-4f4f-8bc8-14a7232d3905: 'Gedeeld blok' # Gedeeld blok
     65bb950b-bf8c-46a5-b2d3-8fa38ea6f215: 'Contact Form' # Contact Form
     86dfc9bd-0363-4046-a638-26e03cd481da: 'Afbeelding (meerdere)' # Afbeelding (meerdere)
@@ -149,7 +149,7 @@ meta:
     74716a14-5d9a-4002-bc77-51f38589d539: 'Artikel grid' # Artikel grid
     437963f6-fffc-4014-921d-e13fd7b2315f: 'Tekst (uitgebreid)' # Tekst (uitgebreid)
     25165387-9136-4739-86cb-59a989b1c003: Afbeelding # Afbeelding
-    a0934f1f-fd61-4f48-ae9a-3afec428cafe: 'Praktijk Driebergen' # Praktijk Driebergen
+    a0934f1f-fd61-4f48-ae9a-3afec428cafe: Oefentherapeut # Oefentherapeut
     a43b9a82-d36b-47f2-9c34-fb66898b6fd1: 'Titel formaat' # Titel formaat
     ae59b117-731a-4efe-83b6-33186b75a174: Evenementen # Evenementen
     b5da10b5-92de-4de6-8ac4-619c4d1eccc6: 'Slider type' # Slider type

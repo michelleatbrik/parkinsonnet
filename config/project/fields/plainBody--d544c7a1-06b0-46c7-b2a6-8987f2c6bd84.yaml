@@ -4,28 +4,55 @@ instructions: null
 name: 'Tekst (simpel)'
 searchable: false
 settings:
+  advancedLinkFields: null
   availableTransforms: ''
   availableVolumes: '*'
   characterLimit: null
   css: null
   cssFile: null
   defaultTransform: null
-  fullGraphqlData: false
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
+  fullGraphqlData: true
   headingLevels:
-    - 2
-    - 3
-    - 4
+    - '2'
+    - '3'
+    - '4'
+  imageEntryTypeUid: null
+  imageFieldUid: null
+  imageMode: img
   js: null
   jsFile: null
   options:
-    link:
-      decorators:
-        isExternal:
-          attributes:
-            rel: 'noopener noreferrer'
-            target: _blank
-          label: 'Open in a new tab'
-          mode: manual
+    __assoc__:
+      -
+        - link
+        -
+          __assoc__:
+            -
+              - decorators
+              -
+                __assoc__:
+                  -
+                    - isExternal
+                    -
+                      __assoc__:
+                        -
+                          - attributes
+                          -
+                            __assoc__:
+                              -
+                                - rel
+                                - 'noopener noreferrer'
+                              -
+                                - target
+                                - _blank
+                        -
+                          - label
+                          - 'Open in a new tab'
+                        -
+                          - mode
+                          - manual
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
@@ -42,5 +69,5 @@ settings:
     - link
   wordLimit: null
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: craft\ckeditor\Field

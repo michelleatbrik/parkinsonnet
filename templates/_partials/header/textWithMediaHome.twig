@@ -37,7 +37,7 @@
         <div class="w-full lg:w-[95%] lg:col-span-6 relative lg:order-1 h-full flex lg:items-start">
             <div class="flex flex-col gap-24">
                 {% if entry.preHeading|length %}
-                    <div class="uppercase text-20/120 font-bold text-primary ">{{ entry.preHeading }}</div>
+                    <div class="uppercase text-20/120 font-bold text-action ">{{ entry.preHeading }}</div>
                 {% endif %}
                 <div class="flex flex-row gap-16 items-center">    
                     {% include "_components/atoms/heading/heading.twig" with { htmlTag: "h1", text: entry.title, headingClasses: '', color: "black", size: "large", textTransform: ""  } only %}

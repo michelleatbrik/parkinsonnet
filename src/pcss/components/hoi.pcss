@@ -13,7 +13,7 @@
 	--color-border: var(--color-black-100);
 
 	/* Action  */
-	--color-action: var(--color-brand-300);
+
 	--color-action-hover: var(--color-brand-300);
 	--color-action-foreground: var(--color-white-1000);
 	--color-action-foreground-hover: var(--color-black-1000);
@@ -101,25 +101,11 @@
 
 	/* Themes option*/
 
-	[data-theme='light'] {
+	--color-action: var(--color-brand-300-trainingscentrum);
+
+	[data-theme='oefentherapie'] {
 		--color-surface: var(--color-white);
 		--color-text: var(--color-black);
-		--color-action: var(--color-brand-300);
+		--color-action: var(--color-brand-300-oefentherapie);
 	}
-}
-
-[data-shape='default'] {
-	--shape-radius-button: 0;
-	--shape-radius-card: 0;
-	--shape-radius-block: 0;
-	--shape-radius-media: 0;
-	--shape-radius-label: 0rem;
-}
-
-[data-shape='rounded'] {
-	--shape-radius-button: 9999px;
-	--shape-radius-card: 16px;
-	--shape-radius-block: 32px;
-	--shape-radius-media: 16px;
-	--shape-radius-label: 8px;
 }
