@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa1b93659242a1593bafdbbbe760540b",
+    "content-hash": "536c42a34ad199857bbc4b0bb7ac4de6",
     "packages": [
         {
             "name": "amphp/amp",
@@ -13385,38 +13385,6 @@
             "time": "2026-08-30T00:47:26+00:00"
         },
         {
-            "name": "teamnovu/craft-sitecopy",
-            "version": "4.0.4",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/neustadt-swiss/craft-sitecopy/zipball/9cd4f5a3fe73b955ed1d7d0ff078e6bbf267773f",
-                "reference": "9cd4f5a3fe73b955ed1d7d0ff078e6bbf267773f",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^4.5.11|^5.0.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "handle": "site-copy-x",
-                "name": "Site Copy X",
-                "developer": "Novu",
-                "developerUrl": "https://novu.ch",
-                "class": "teamnovu\\sitecopy\\SiteCopy",
-                "hasSettings": true
-            },
-            "autoload": {
-                "psr-4": {
-                    "teamnovu\\sitecopy\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "This plugin makes it easy to copy the content of an entry from a site to another",
-            "time": "2026-07-12T09:16:28+00:00"
-        },
-        {
             "name": "theiconic/name-parser",
             "version": "v1.2.11",
             "dist": {
@@ -13815,60 +13783,6 @@
             "time": "2026-05-03T23:11:50+00:00"
         },
         {
-            "name": "verbb/hyper",
-            "version": "2.3.6",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/verbb/hyper/zipball/2480358b24dbbb910349d585e3519aa3b613f701",
-                "reference": "2480358b24dbbb910349d585e3519aa3b613f701",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^5.0.0",
-                "embed/embed": "^3.0.0 || ^4.0.0",
-                "nystudio107/craft-plugin-vite": "^5.0.0",
-                "php": "^8.2",
-                "verbb/base": "^3.0.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Hyper",
-                "handle": "hyper",
-                "changelogUrl": "https://raw.githubusercontent.com/verbb/hyper/craft-5/CHANGELOG.md",
-                "class": "verbb\\hyper\\Hyper"
-            },
-            "autoload": {
-                "psr-4": {
-                    "verbb\\hyper\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Verbb",
-                    "homepage": "https://verbb.io"
-                }
-            ],
-            "description": "A user-friendly links field for Craft.",
-            "keywords": [
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "hyper"
-            ],
-            "support": {
-                "email": "support@verbb.io",
-                "issues": "https://github.com/verbb/hyper/issues?state=open",
-                "source": "https://github.com/verbb/hyper",
-                "docs": "https://github.com/verbb/hyper",
-                "rss": "https://github.com/verbb/hyper/commits/v2.atom"
-            },
-            "time": "2026-04-29T23:55:00+00:00"
-        },
-        {
             "name": "verbb/icon-picker",
             "version": "3.0.10",
             "dist": {
@@ -13976,59 +13890,6 @@
                 "rss": "https://github.com/verbb/knock-knock/commits/v2.atom"
             },
             "time": "2025-11-29T03:52:23+00:00"
-        },
-        {
-            "name": "verbb/navigation",
-            "version": "3.0.20",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/verbb/navigation/zipball/632aecbbedd61442879f23495c9803d900f986a1",
-                "reference": "632aecbbedd61442879f23495c9803d900f986a1",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^5.0.0",
-                "php": "^8.2",
-                "verbb/base": "^3.0.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Navigation",
-                "handle": "navigation",
-                "changelogUrl": "https://raw.githubusercontent.com/verbb/navigation/craft-5/CHANGELOG.md",
-                "class": "verbb\\navigation\\Navigation"
-            },
-            "autoload": {
-                "psr-4": {
-                    "verbb\\navigation\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Verbb",
-                    "homepage": "https://verbb.io"
-                }
-            ],
-            "description": "Create navigation menus for your site.",
-            "keywords": [
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "menu",
-                "navigation"
-            ],
-            "support": {
-                "email": "support@verbb.io",
-                "issues": "https://github.com/verbb/navigation/issues?state=open",
-                "source": "https://github.com/verbb/navigation",
-                "docs": "https://github.com/verbb/navigation",
-                "rss": "https://github.com/verbb/navigation/commits/v2.atom"
-            },
-            "time": "2026-04-16T01:57:15+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

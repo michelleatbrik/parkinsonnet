@@ -33,13 +33,10 @@
 		"spicyweb/craft-embedded-assets": "^5.4.7",
 		"studioespresso/craft-date-range": "^5.1",
 		"superbig/craft-mjml": "^5.0",
-		"teamnovu/craft-sitecopy": "^4.0.4",
 		"verbb/buttonbox": "^5.0.0",
 		"verbb/formie": "^3.1.23",
-		"verbb/hyper": "^2.3.6",
 		"verbb/icon-picker": "^3.0.10",
 		"verbb/knock-knock": "3.0.5",
-		"verbb/navigation": "^3.0.20",
 		"vlucas/phpdotenv": "^5.4.0",
 		"webrgp/craft-ignition-core": "^1.1",
 		"yiisoft/yii2-redis": "^2.0"

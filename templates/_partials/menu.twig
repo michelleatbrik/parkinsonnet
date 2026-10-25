@@ -9,7 +9,7 @@
 
             <div class="flex flex-row xl:gap-24 gap-12 items-center">
                 <ul class="flex-row xl:gap-24 gap-12 lg:flex hidden">
-                    {% set nodes = craft.navigation.nodes('mainMenu').level(1).all() %}
+                    {# {% set nodes = craft.navigation.nodes('mainMenu').level(1).all() %}
                     {% for node in nodes %}
                         <li>
                         {% if node.children|length %}
@@ -63,7 +63,7 @@
                             </a>
                         {% endif %}
                         </li>
-                    {% endfor %}
+                    {% endfor %} #}
                 </ul>
 
                 <span class="h-32 w-1 bg-black/20 mr-1 lg:flex hidden"></span>
@@ -214,8 +214,8 @@
     </div>
 
     {% block offcanvas %}
-		{% include '_partials/offcanvas/mobileMenu.twig' with {
+		{# {% include '_partials/offcanvas/mobileMenu.twig' with {
 			mainMenu: nodes
-		} %}
+		} %} #}
 	{% endblock %}
 </header>

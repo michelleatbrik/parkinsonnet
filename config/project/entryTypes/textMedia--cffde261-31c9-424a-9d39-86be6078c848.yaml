@@ -86,7 +86,7 @@ fieldLayouts:
             dateAdded: '2025-07-18T15:11:42+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: b56c28d2-a08b-4291-80fd-4cff8f398791 # Weergave
+            fieldUid: b56c28d2-a08b-4291-80fd-4cff8f398791
             handle: null
             instructions: null
             label: null
@@ -105,7 +105,7 @@ fieldLayouts:
               conditionRules:
                 -
                   class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: b56c28d2-a08b-4291-80fd-4cff8f398791 # Weergave
+                  fieldUid: b56c28d2-a08b-4291-80fd-4cff8f398791
                   layoutElementUid: 61540616-9de6-46d8-9685-7bf21a3cabd1
                   operator: in
                   uid: 1510c385-5f0b-41c2-a83a-bb229c640c11

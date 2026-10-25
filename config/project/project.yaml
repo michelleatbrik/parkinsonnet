@@ -1,4 +1,4 @@
-dateModified: 1792961412
+dateModified: 1792962080
 elementSources:
   craft\elements\Entry:
     -
@@ -123,6 +123,7 @@ meta:
     5b32607c-44dd-4704-93ab-43b9b6098b44: Kaarten # Kaarten
     5ec318c4-b6f4-4a56-92a5-f9b7edfbb635: Errors # Errors
     5fe4b921-1ad2-4cce-bf81-bb2fe1f766a3: 'Externe url' # Externe url
+    6a22db12-1689-4b38-9cae-ec941874047e: Knop # Knop
     8d87bf9f-8546-434b-a971-6407e109f8aa: Blokken # Blokken
     8f1de83a-5ad7-4f76-8394-6aab1d2b4601: Kaart # Kaart
     8f439fc2-311f-4f45-99c6-c482d129d1fd: Tag # Tag
@@ -142,26 +143,19 @@ meta:
     5026f9b8-4a01-4754-8e5b-e71d9e17f5c8: Thema # Thema
     6548b4e4-c92a-4820-8d2f-065cbf1bda66: Indexes # Indexes
     7205ce0b-82c8-45e4-8400-08ceaf7f7576: Bestanden # Bestanden
-    7990d129-e4e9-488d-b9ca-0347364425e1: 'Icoon positie' # Icoon positie
     18915ee7-c649-4733-ab93-d96d10d1b46a: Video # Video
-    35872b14-d347-4e31-889e-b505340c4704: 'Knop thema' # Knop thema
     54058ce4-020d-4535-9931-d69993419df7: Artikelen # Artikelen
     74716a14-5d9a-4002-bc77-51f38589d539: 'Artikel grid' # Artikel grid
     437963f6-fffc-4014-921d-e13fd7b2315f: 'Tekst (uitgebreid)' # Tekst (uitgebreid)
     25165387-9136-4739-86cb-59a989b1c003: Afbeelding # Afbeelding
     a0934f1f-fd61-4f48-ae9a-3afec428cafe: Oefentherapeut # Oefentherapeut
-    a43b9a82-d36b-47f2-9c34-fb66898b6fd1: 'Titel formaat' # Titel formaat
     ae59b117-731a-4efe-83b6-33186b75a174: Evenementen # Evenementen
-    b5da10b5-92de-4de6-8ac4-619c4d1eccc6: 'Slider type' # Slider type
     b7fa6983-cbe4-435a-a345-b065911c3442: "Pagina's" # Pagina's
     b9f016c9-d8b3-49f8-acbe-3337414dd097: Artikelen # Artikelen
     b20babee-2b3a-4f80-9384-15e7b592cdc9: 'Artikel type' # Artikel type
-    b56c28d2-a08b-4291-80fd-4cff8f398791: Weergave # Weergave
     b5386dfa-66c8-4d08-bbcc-38503a3862c9: ' Video' # Video
-    bb9f38f1-c5e0-4ed6-9d09-97f29487de56: Type # Type
     bc6369ec-7f21-4151-a8ad-85cec976c987: 'Artikel type' # Artikel type
     c5b33e76-5fe4-40c4-98a6-2f13e354ced5: Knoppen # Knoppen
-    c6a1c79f-c8b3-46ea-ba09-ccb521dd8e22: Knop # Knop
     c798cdf5-723e-4cdc-8ac1-6c527b1a14a6: Bovenkop # Bovenkop
     c957c2ee-ff8a-4973-8111-58c21b775495: Tekst # Tekst
     c3833bf8-fd94-41d8-9ffc-edd0fa60fc6a: Baseplate # Baseplate
@@ -169,11 +163,9 @@ meta:
     d4a4bc7c-6065-4510-878b-e4e3ef6ec1ce: Type # Type
     d544c7a1-06b0-46c7-b2a6-8987f2c6bd84: 'Tekst (simpel)' # Tekst (simpel)
     d602da2a-239f-4f18-93fd-8047af89cdd0: Kop # Kop
-    d1928b4f-7613-41fb-9e2b-4756e2c31adb: 'Evenement datum' # Evenement datum
     d52247de-f951-467f-823c-4808b53741ca: 'Gedeeld blok' # Gedeeld blok
     db6df807-fdb5-4bef-a3f5-2ebb6800c0bd: Artikelen # Artikelen
     dbd31f29-8b03-46f8-819a-181826ff96c0: New # New
-    dcaf6647-c88d-48cf-adf6-9b3e1d3150b1: Icoon # Icoon
     e325439d-f974-4c27-a2d9-2fe44cce12bb: Quote # Quote
     ea1d1d9d-cf47-49b6-b446-f180827ab5d2: Kaarten # Kaarten
     edb6d78c-27f5-4522-852d-2df53429bb71: Errors # Errors
@@ -206,11 +198,6 @@ plugins:
     enabled: true
     licenseKey: 435ASQ7ZIWT7QYQXDI5WQTZX
     schemaVersion: 3.4.12
-  hyper:
-    edition: standard
-    enabled: true
-    licenseKey: JDD5CBCNB6O91IA0SP9ZFTF9
-    schemaVersion: 1.0.0
   imager-x:
     edition: pro
     enabled: true
@@ -240,11 +227,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  navigation:
-    edition: standard
-    enabled: true
-    licenseKey: N94WJ8FJY1C9LSYZ747WGJP7
-    schemaVersion: 2.1.2
   position-fieldtype:
     edition: standard
     enabled: true
@@ -262,11 +244,6 @@ plugins:
     enabled: true
     licenseKey: 218WSFLLTRNDCBETFJPC9TIA
     schemaVersion: 3.0.13
-  site-copy-x:
-    edition: standard
-    enabled: true
-    licenseKey: LPR7ZW6ZVCH60M0IXMQBW14A
-    schemaVersion: 1.0.2
   video-utils:
     edition: standard
     enabled: true

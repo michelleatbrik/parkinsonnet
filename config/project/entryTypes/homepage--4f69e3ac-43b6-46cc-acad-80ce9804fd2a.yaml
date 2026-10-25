@@ -62,7 +62,7 @@ fieldLayouts:
             handle: intro
             instructions: null
             label: Intro
-            oldFieldUid: d544c7a1-06b0-46c7-b2a6-8987f2c6bd84 # Tekst (simpel)
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -101,6 +101,23 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 2c4670c2-794c-4af8-9ded-545b71004852
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-10-25T20:55:46+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6a22db12-1689-4b38-9cae-ec941874047e # Knop
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6e8f8d47-b275-4548-a991-0e96986f7a0f
             userCondition: null
             warning: null
             width: 100
