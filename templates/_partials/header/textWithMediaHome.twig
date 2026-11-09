@@ -4,7 +4,7 @@
 {% set partyItems = partyItems|default([]) %}
 {% set relatedItems = relatedItems|default([]) %}
 
-<div class="relative bg-primary/15">
+<div class="relative">
     <div class="grid z-10 container lg:grid-cols-12 grid-cols-1 lg:gap-y-0 gap-y-32 gap-x-64">
         
         <figure class="lg:order-2 lg:col-span-6 relative aspect-[77-50] z-10">
@@ -42,7 +42,7 @@
         <div class="w-full lg:w-[95%] lg:col-span-6 relative lg:order-1 h-full flex lg:items-start">
             <div class="flex flex-col gap-24">
                 {% if entry.preHeading|length %}
-                    <div class="uppercase text-20/120 font-bold text-action ">{{ entry.preHeading }}</div>
+                    <div class="uppercase text-20/120 font-bold text-primary ">{{ entry.preHeading }}</div>
                 {% endif %}
                 <div class="flex flex-row gap-16 items-center">    
                     {% include "_components/atoms/heading/heading.twig" with { htmlTag: "h1", text: entry.title, headingClasses: '', color: "black", size: "large", textTransform: ""  } only %}
