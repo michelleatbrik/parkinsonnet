@@ -1,0 +1,11 @@
+fill: null
+format: null
+handle: heroTextWithMediaHome
+height: 520
+interlace: none
+mode: crop
+name: 'Hero Text With Media Home'
+position: center-center
+quality: 80
+upscale: false
+width: 800

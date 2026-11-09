@@ -24,13 +24,18 @@
                 } %}
             {% elseif entry.singleImage|length %}
                 {% set image = entry.singleImage[0] %}
+
                 {% include "_components/atoms/image/image.twig" with {
                     image: image,
-                    transform: "heroTextWithMediaHome",
-                    alt: image.alt,
-                    imageClasses: 'aspect-[77-50] w-full rounded-3xl',
-                    wrapperClasses: 'w-full'
+                    imageMobile: image,
+                    transform: 'heroTextWithMediaHome',
+                    mobileTransform: 'heroTextWithMediaHome',
+                    imageClasses: 'w-full h-full object-cover rounded-3xl',
+                    wrapperClasses: 'w-full',
+                    loading: 'eager',
+                    fetchpriority: 'high'
                 } %}
+
             {% endif %}
         </figure>
 

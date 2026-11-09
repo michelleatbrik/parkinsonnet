@@ -1,4 +1,4 @@
-dateModified: 1792962080
+dateModified: 1794255441
 elementSources:
   craft\elements\Entry:
     -
@@ -115,9 +115,17 @@ fs:
       path: '@webroot/assets/files'
     type: craft\fs\Local
     url: '@assetsUrl/assets/files'
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: $ASSETS_PATH
+    type: craft\fs\Local
+    url: $ASSETS_URL
 meta:
   __names__:
     1bf7f973-b634-4c7e-adbc-e71f1a4c70f8: Artikelen # Artikelen
+    1e5a08ca-e3d9-4628-bf62-9e267c28fd11: Images # Images
     4f08eaca-189d-42fc-9987-cbed19663296: 'Maximaal aantal berichten' # Maximaal aantal berichten
     4f69e3ac-43b6-46cc-acad-80ce9804fd2a: Homepage # Homepage
     5b32607c-44dd-4704-93ab-43b9b6098b44: Kaarten # Kaarten
@@ -140,6 +148,7 @@ meta:
     731e9cf0-d175-4a28-bd06-59e7f71e6ba1: 'SEO Instellingen' # SEO Instellingen
     767c68f7-a42c-4402-a640-46af0c267fb7: 'Afbeelding ratio' # Afbeelding ratio
     889f70a7-0949-425c-a9be-060721269cf0: 'Tekst positie' # Tekst positie
+    4239a2ae-47ed-4bc2-940c-0a5c4f20cbcd: 'Hero Text With Media Home' # Hero Text With Media Home
     5026f9b8-4a01-4754-8e5b-e71d9e17f5c8: Thema # Thema
     6548b4e4-c92a-4820-8d2f-065cbf1bda66: Indexes # Indexes
     7205ce0b-82c8-45e4-8400-08ceaf7f7576: Bestanden # Bestanden

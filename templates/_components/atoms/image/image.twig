@@ -1,52 +1,95 @@
+
 {# Image #}
-{% set image = image is defined and image|length ? image : null %}
-{% set imageMobile = imageMobile is defined and imageMobile|length ? imageMobile : image %}
-{% set alt = alt is defined and alt|length ? alt : '' %}
+{% set image = image ?? null %}
+{% set imageMobile = imageMobile ?? null %}
+{% set alt = alt ?? image.alt ?? image.title ?? '' %}
 
 {# Settings #}
-{% set loading = loading is defined and loading|length ? loading : 'lazy' %}
-{% set fetchpriority = fetchpriority is defined and fetchpriority|length ? fetchpriority : 'auto' %}
-{% set transform = transform is defined and transform|length ? transform : 'default' %}
+{% set transform = transform ?? 'default' %}
+{% set mobileTransform = mobileTransform ?? transform %}
+{% set loading = loading ?? 'lazy' %}
+{% set fetchpriority = fetchpriority ?? 'auto' %}
+{% set sizes = sizes ?? '(max-width: 768px) 100vw, 50vw' %}
+{% set mobileSizes = mobileSizes ?? '100vw' %}
+{% set densities = ['1x', '1.5x', '2x'] %}
 
 {# Classes #}
-{% set attributes = {} %}
-{% set imageClasses = imageClasses is defined and imageClasses|length ? imageClasses : '' %}
-{% set wrapperClasses = wrapperClasses is defined and wrapperClasses|length ? wrapperClasses : '' %}
-{% if wrapperClasses %}
-    {% set attributes = {
-        class: [wrapperClasses|join(' ')]
-    } %}
-{% endif %}
-
-{# Transform #}
-{% if craft.imager.hasNamedTransform(transform ~ 'Mobile') %}
-	{% set mobileTransform = transform ~ 'Mobile' %}
-{% else %}
-	{% set mobileTransform = transform %}
-{% endif %}
+{% set imageClasses = imageClasses ?? '' %}
+{% set wrapperClasses = wrapperClasses ?? '' %}
 
 {% if image %}
-    {{ pppicture(
-        [
-            [image, transform~ 'Avif', 768, 'avif'],
-            [image, transform~ 'Webp', 768, 'webp'],
-            [image, transform, 768],
-            [imageMobile, mobileTransform ~ 'Avif', 'avif'],
-            [imageMobile, mobileTransform ~ 'Webp', 'webp'],
-            [imageMobile, mobileTransform]
-        ],
-        {
-            'data-sizes': 'auto',
-            class: 'lazyload w-full '~imageClasses  ,
-            loading: loading,
-            fetchpriority: fetchpriority,
-            decoding: 'async',
-            alt: alt,
-        },
-        {
-            lazysizes: true,
-            placeholder: 'blurhash'
-        }
-        )|attr(attributes)
-    }}
+
+    {# Desktop WebP #}
+    {% do image.setTransform({
+        transform: transform,
+        format: 'webp',
+        quality: 80
+    }) %}
+    {% set desktopWebp = image.getSrcset(densities) %}
+
+    {# Desktop fallback: JPG/PNG #}
+    {% do image.setTransform(transform) %}
+    {% set desktopFallback = image.getSrcset(densities) %}
+    {% set fallbackUrl = image.url %}
+    {% set imageWidth = image.width %}
+    {% set imageHeight = image.height %}
+
+    {# Mobile image (optional) #}
+    {% if imageMobile %}
+
+        {% do imageMobile.setTransform({
+            transform: mobileTransform,
+            format: 'webp',
+            quality: 80
+        }) %}
+        {% set mobileWebp = imageMobile.getSrcset(densities) %}
+
+        {% do imageMobile.setTransform(mobileTransform) %}
+        {% set mobileFallback = imageMobile.getSrcset(densities) %}
+
+    {% endif %}
+
+    <div class="{{ wrapperClasses }}">
+        <picture>
+
+            {# Mobile #}
+            {% if imageMobile %}
+                <source
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                    srcset="{{ mobileWebp }}"
+                    sizes="{{ mobileSizes }}"
+                >
+
+                <source
+                    media="(max-width: 767px)"
+                    srcset="{{ mobileFallback }}"
+                    sizes="{{ mobileSizes }}"
+                >
+            {% endif %}
+
+            {# Desktop WebP #}
+            <source
+                type="image/webp"
+                srcset="{{ desktopWebp }}"
+                sizes="{{ sizes }}"
+            >
+
+            {# JPG/PNG fallback #}
+            <img
+                src="{{ fallbackUrl }}"
+                srcset="{{ desktopFallback }}"
+                sizes="{{ sizes }}"
+                width="{{ imageWidth }}"
+                height="{{ imageHeight }}"
+                alt="{{ alt }}"
+                class="{{ imageClasses }}"
+                loading="{{ loading }}"
+                fetchpriority="{{ fetchpriority }}"
+                decoding="async"
+            >
+
+        </picture>
+    </div>
+
 {% endif %}
