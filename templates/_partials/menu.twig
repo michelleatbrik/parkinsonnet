@@ -1,10 +1,10 @@
 {% set sites = currentSite.group.sites %}
 
 <header x-data="mobileMenu" class="lg:mb-[109px] mb-[83px]">
-    <div class="w-full bg-white fixed top-0 z-50 border border-black/15">
-        <div class="flex lg:py-32 py-20 justify-between container ">
-            <a class="block" aria-label="democrats" href="{{ currentSite.baseUrl }}">
-                {{ inlineSvg('logo/logo-default-' ~ currentSite.language, 'text-primary lg:w-[240px] w-[190px]', { sanitize: true, namespace: true }) }}
+    <div class="w-full bg-primary fixed top-0 z-50 border border-black/15">
+        <div class="flex py-20 justify-between container ">
+            <a class="w-164" href="{{ currentSite.baseUrl }}" class="menu__logo ">
+                <img class="w-164" src="{{ currentSite.baseUrl }}/dist/img/logo/logo-parkinson.png" alt="{{ siteName }}">
             </a>
 
             <div class="flex flex-row xl:gap-24 gap-12 items-center">
