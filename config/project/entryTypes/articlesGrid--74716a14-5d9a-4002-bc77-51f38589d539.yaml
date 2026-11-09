@@ -64,7 +64,7 @@ fieldLayouts:
           -
             dateAdded: '2024-10-18T13:00:02+00:00'
             elementCondition: null
-            fieldUid: 8f439fc2-311f-4f45-99c6-c482d129d1fd # Tag
+            fieldUid: 8f439fc2-311f-4f45-99c6-c482d129d1fd
             handle: null
             instructions: null
             label: null
@@ -92,7 +92,7 @@ fieldLayouts:
           -
             dateAdded: '2024-10-18T13:00:02+00:00'
             elementCondition: null
-            fieldUid: c5b33e76-5fe4-40c4-98a6-2f13e354ced5 # Knoppen
+            fieldUid: c5b33e76-5fe4-40c4-98a6-2f13e354ced5
             handle: null
             instructions: null
             label: null

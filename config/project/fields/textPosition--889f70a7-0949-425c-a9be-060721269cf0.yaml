@@ -26,5 +26,5 @@ settings:
         - drop-right
         - ''
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: rias\positionfieldtype\fields\Position

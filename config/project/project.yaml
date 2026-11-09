@@ -1,4 +1,4 @@
-dateModified: 1794255441
+dateModified: 1794257163
 elementSources:
   craft\elements\Entry:
     -
@@ -134,7 +134,6 @@ meta:
     6a22db12-1689-4b38-9cae-ec941874047e: Knop # Knop
     8d87bf9f-8546-434b-a971-6407e109f8aa: Blokken # Blokken
     8f1de83a-5ad7-4f76-8394-6aab1d2b4601: Kaart # Kaart
-    8f439fc2-311f-4f45-99c6-c482d129d1fd: Tag # Tag
     10e2197c-c763-463e-998a-a704543fd784: 'Platte tekst' # Platte tekst
     41acee22-6393-41e7-a771-e5fd28d42beb: 'Praktijk Driebergen' # Praktijk Driebergen
     057c8c38-dc14-4f4f-8bc8-14a7232d3905: 'Gedeeld blok' # Gedeeld blok
@@ -164,7 +163,6 @@ meta:
     b20babee-2b3a-4f80-9384-15e7b592cdc9: 'Artikel type' # Artikel type
     b5386dfa-66c8-4d08-bbcc-38503a3862c9: ' Video' # Video
     bc6369ec-7f21-4151-a8ad-85cec976c987: 'Artikel type' # Artikel type
-    c5b33e76-5fe4-40c4-98a6-2f13e354ced5: Knoppen # Knoppen
     c798cdf5-723e-4cdc-8ac1-6c527b1a14a6: Bovenkop # Bovenkop
     c957c2ee-ff8a-4973-8111-58c21b775495: Tekst # Tekst
     c3833bf8-fd94-41d8-9ffc-edd0fa60fc6a: Baseplate # Baseplate

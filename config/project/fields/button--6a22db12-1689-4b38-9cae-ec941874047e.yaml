@@ -6,7 +6,7 @@ searchable: false
 settings:
   advancedFields:
     - title
-  fullGraphqlData: true
+  fullGraphqlData: false
   maxLength: 255
   showLabelField: false
   typeSettings:
@@ -37,9 +37,26 @@ settings:
             -
               - allowCustomSchemes
               - ''
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+            -
+              - allowedKinds
+              - '*'
+            -
+              - showUnpermittedVolumes
+              - ''
+            -
+              - showUnpermittedFiles
+              - ''
   types:
     - entry
     - url
+    - asset
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: craft\fields\Link

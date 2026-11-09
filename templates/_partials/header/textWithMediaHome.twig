@@ -56,22 +56,6 @@
                 {% if entry.button %}
                     <a class="text-action" href="{{entry.button.url}}">{{entry.button.title}}</a>
                 {% endif %}
-                
-
-                {% if entry.buttons is defined and entry.buttons|length %}
-                    <div class="flex flex-row flex-wrap gap-x-16 mt-12">
-                        {% for button in entry.buttons %}
-                            {% include "_components/atoms/button/button.twig" with {
-                                htmlTag: 'a',
-                                url: button.url,
-                                text: button.text,
-                                target: button.target,
-                                icon: button.iconPicker,
-                                theme: 'white'
-                            } %}
-                        {% endfor %}
-                    </div>
-                {% endif %}
             </div>
         </div>
     </div>

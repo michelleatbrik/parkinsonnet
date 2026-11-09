@@ -9,6 +9,23 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2026-11-09T20:42:10+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c798cdf5-723e-4cdc-8ac1-6c527b1a14a6 # Bovenkop
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6503c7b8-5d92-4fbe-9853-de3d723d2e5e
+            userCondition: null
+            warning: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -33,6 +50,23 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: e7309098-a10e-4e0d-b987-535efbf1007b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-09T20:42:10+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d544c7a1-06b0-46c7-b2a6-8987f2c6bd84 # Tekst (simpel)
+            handle: intro
+            instructions: null
+            label: Intro
+            oldFieldUid: d544c7a1-06b0-46c7-b2a6-8987f2c6bd84 # Tekst (simpel)
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 944002a3-5322-4813-a375-9d37f61013b1
             userCondition: null
             warning: null
             width: 100

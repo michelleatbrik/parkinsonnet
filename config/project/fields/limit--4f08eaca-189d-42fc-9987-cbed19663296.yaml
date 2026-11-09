@@ -12,7 +12,8 @@ settings:
   previewCurrency: null
   previewFormat: decimal
   size: null
+  step: null
   suffix: null
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: craft\fields\Number
