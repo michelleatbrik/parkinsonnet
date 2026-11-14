@@ -1,4 +1,4 @@
-dateModified: 1794690356
+dateModified: 1794691945
 elementSources:
   craft\elements\Entry:
     -
@@ -49,7 +49,7 @@ elementSources:
         - desc
       defaultViewMode: ''
       disabled: false
-      key: 'section:ae59b117-731a-4efe-83b6-33186b75a174' # Evenementen
+      key: 'section:ae59b117-731a-4efe-83b6-33186b75a174'
       page: Entries
       tableAttributes:
         - status
@@ -90,7 +90,7 @@ elementSources:
         - desc
       defaultViewMode: ''
       disabled: false
-      key: 'section:edb6d78c-27f5-4522-852d-2df53429bb71' # Errors
+      key: 'section:edb6d78c-27f5-4522-852d-2df53429bb71'
       page: Entries
       tableAttributes:
         - status
@@ -129,7 +129,6 @@ meta:
     4f08eaca-189d-42fc-9987-cbed19663296: 'Maximaal aantal berichten' # Maximaal aantal berichten
     4f69e3ac-43b6-46cc-acad-80ce9804fd2a: Homepage # Homepage
     5b32607c-44dd-4704-93ab-43b9b6098b44: Kaarten # Kaarten
-    5ec318c4-b6f4-4a56-92a5-f9b7edfbb635: Errors # Errors
     5fe4b921-1ad2-4cce-bf81-bb2fe1f766a3: 'Externe url' # Externe url
     6a22db12-1689-4b38-9cae-ec941874047e: Knop # Knop
     07f30295-f12c-4385-997c-357a55867a55: Menu # Menu
@@ -139,6 +138,7 @@ meta:
     10e2197c-c763-463e-998a-a704543fd784: 'Platte tekst' # Platte tekst
     41acee22-6393-41e7-a771-e5fd28d42beb: 'Praktijk Driebergen' # Praktijk Driebergen
     057c8c38-dc14-4f4f-8bc8-14a7232d3905: 'Gedeeld blok' # Gedeeld blok
+    61dcf7c4-2790-4da9-a604-8258e7728ad0: Buttons # Buttons
     65bb950b-bf8c-46a5-b2d3-8fa38ea6f215: 'Contact Form' # Contact Form
     86dfc9bd-0363-4046-a638-26e03cd481da: 'Afbeelding (meerdere)' # Afbeelding (meerdere)
     87add8ee-18cc-4272-8a4c-4fd06d16ec25: "Pagina's" # Pagina's
@@ -146,7 +146,7 @@ meta:
     132fd44a-075e-4b36-a399-5270c429abdd: 'Artikel Type' # Artikel Type
     432be928-1cc7-435b-bd50-bf75c40a983c: 'Gedeelde content blokken' # Gedeelde content blokken
     463ad734-10d6-4cfb-9bd9-f5c8fd05c47c: 'Card Icon' # Card Icon
-    596b60e6-cde4-48fb-9853-a567dcb99ece: Knoppen # Knoppen
+    596b60e6-cde4-48fb-9853-a567dcb99ece: Knop # Knop
     731e9cf0-d175-4a28-bd06-59e7f71e6ba1: 'SEO Instellingen' # SEO Instellingen
     889f70a7-0949-425c-a9be-060721269cf0: 'Tekst positie' # Tekst positie
     4239a2ae-47ed-4bc2-940c-0a5c4f20cbcd: 'Hero Text With Media Home' # Hero Text With Media Home
@@ -159,7 +159,6 @@ meta:
     437963f6-fffc-4014-921d-e13fd7b2315f: 'Tekst (uitgebreid)' # Tekst (uitgebreid)
     25165387-9136-4739-86cb-59a989b1c003: Afbeelding # Afbeelding
     a0934f1f-fd61-4f48-ae9a-3afec428cafe: Oefentherapeut # Oefentherapeut
-    ae59b117-731a-4efe-83b6-33186b75a174: Evenementen # Evenementen
     b7fa6983-cbe4-435a-a345-b065911c3442: "Pagina's" # Pagina's
     b9f016c9-d8b3-49f8-acbe-3337414dd097: Artikelen # Artikelen
     b20babee-2b3a-4f80-9384-15e7b592cdc9: 'Artikel type' # Artikel type
@@ -178,7 +177,6 @@ meta:
     e325439d-f974-4c27-a2d9-2fe44cce12bb: Quote # Quote
     ea1d1d9d-cf47-49b6-b446-f180827ab5d2: Kaarten # Kaarten
     ec0547b4-89af-43de-a95e-02e522e2d6c0: 'Menu items' # Menu items
-    edb6d78c-27f5-4522-852d-2df53429bb71: Errors # Errors
     edd82513-9dec-4df9-a2a1-300da844a91f: 'Parkinson trainingscentrum' # Parkinson trainingscentrum
     f9a50eaa-e4c7-4211-bfda-4797859199e9: 'Gedeelde content blokken' # Gedeelde content blokken
     f659e4e5-e885-4efe-918b-f9ea22bef550: 'Afbeelding (enkel)' # Afbeelding (enkel)
@@ -265,7 +263,7 @@ plugins:
 system:
   edition: solo
   live: true
-  name: Baseplate
+  name: 'Parkinson trainingscentrum'
   retryDuration: 60
   schemaVersion: 5.11.0.2
   timeZone: America/Los_Angeles

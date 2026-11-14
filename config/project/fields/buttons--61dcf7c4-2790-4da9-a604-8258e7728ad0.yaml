@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: buttons
+instructions: null
+name: Buttons
+searchable: false
+settings:
+  createButtonLabel: 'Nieuwe knop'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 596b60e6-cde4-48fb-9853-a567dcb99ece # Knop
+        -
+          - group
+          - Algemeen
+  includeTableView: false
+  maxEntries: 2
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: none
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

@@ -6,13 +6,13 @@
 {% set type = type|default('button') %}
 {% set fullWidth = fullWidth|default('auto') %}
 {% set buttonClasses = buttonClasses|default(false) %}
-{% set baseClasses = 'inline-flex items-center justify-center font-bold text-base transition ease-in-out duration-150' %}
+{% set baseClasses = 'inline-flex text-18 items-center justify-center hover:opacity-75 font-bold text-base transition ease-in-out duration-150' %}
 
 {% switch theme %}
 	{% case 'primary' %}
-		{% set themeClasses = 'bg-primary text-white hover:text-primary hover:bg-secondary' %}
+		{% set themeClasses = 'bg-action px-20 py-12 rounded-full text-white  ' %}
 	{% case 'secondary' %}
-		{% set themeClasses = 'bg-secondary text-primary hover:bg-primary hover:text-secondary' %}
+		{% set themeClasses = 'bg-white border-action border  px-20 py-12 rounded-full text-action' %}
 	{% case 'textDark' %}
 		{% set themeClasses = 'text-black border-b border-current hover:text-secondary' %}
 	{% case 'textLight' %}
@@ -23,15 +23,6 @@
 	class: [baseClasses|join(' '), themeClasses|join(' '),]
 } %}
 
-{% switch size %}
-	{% case 'large' %}
-		{% set fontSize = 'text-18' %}
-		{% set padding = 'px-20 py-12' %}
-	{% case 'small' %}
-		{% set fontSize = 'text-16' %}
-		{% set padding = 'px-12 py-8' %}
-{% endswitch %}
-
 {% switch fullWidth %}
 	{% case "always" %}
 		{% set attributes = attributes|merge({class: [attributes.class|join(' '), 'w-full']}) %}
@@ -40,9 +31,9 @@
 {% endswitch %}
 
 {% if theme starts with 'text' %}
-	{% set attributes = attributes|merge({class: [attributes.class|join(' '), fontSize|join(' ')]}) %}
+	{% set attributes = attributes|merge({class: [attributes.class|join(' ')]}) %}
 {% else %}
-	{% set attributes = attributes|merge({class: [attributes.class|join(' '), fontSize|join(' '), padding|join(' ')]}) %}
+	{% set attributes = attributes|merge({class: [attributes.class|join(' ')]}) %}
 {% endif %}
 
 {% if buttonClasses %}
@@ -58,10 +49,6 @@
             {% set attributes = attributes|merge({rel: 'noopener noreferrer'}) %}
         {% endif %}
     {% endif %}
-
-	{% if rel %}
-		{% set attributes = attributes|merge({rel: rel|join(' ')}) %}
-	{% endif %}
 {% else %}
     {% set attributes = attributes|merge({role: role}) %}
 
