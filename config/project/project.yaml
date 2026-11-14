@@ -1,4 +1,4 @@
-dateModified: 1794259206
+dateModified: 1794690356
 elementSources:
   craft\elements\Entry:
     -
@@ -132,8 +132,10 @@ meta:
     5ec318c4-b6f4-4a56-92a5-f9b7edfbb635: Errors # Errors
     5fe4b921-1ad2-4cce-bf81-bb2fe1f766a3: 'Externe url' # Externe url
     6a22db12-1689-4b38-9cae-ec941874047e: Knop # Knop
+    07f30295-f12c-4385-997c-357a55867a55: Menu # Menu
     8d87bf9f-8546-434b-a971-6407e109f8aa: Blokken # Blokken
     8f1de83a-5ad7-4f76-8394-6aab1d2b4601: Kaart # Kaart
+    9a2d25a2-dae8-4bbd-95da-9fbd7ee2c1fc: Pagina # Pagina
     10e2197c-c763-463e-998a-a704543fd784: 'Platte tekst' # Platte tekst
     41acee22-6393-41e7-a771-e5fd28d42beb: 'Praktijk Driebergen' # Praktijk Driebergen
     057c8c38-dc14-4f4f-8bc8-14a7232d3905: 'Gedeeld blok' # Gedeeld blok
@@ -164,7 +166,7 @@ meta:
     b5386dfa-66c8-4d08-bbcc-38503a3862c9: ' Video' # Video
     bc6369ec-7f21-4151-a8ad-85cec976c987: 'Artikel type' # Artikel type
     c798cdf5-723e-4cdc-8ac1-6c527b1a14a6: Bovenkop # Bovenkop
-    c957c2ee-ff8a-4973-8111-58c21b775495: Tekst # Tekst
+    c957c2ee-ff8a-4973-8111-58c21b775495: 'Menu item' # Menu item
     c3833bf8-fd94-41d8-9ffc-edd0fa60fc6a: Baseplate # Baseplate
     cffde261-31c9-424a-9d39-86be6078c848: 'Tekst met media' # Tekst met media
     d4a4bc7c-6065-4510-878b-e4e3ef6ec1ce: Type # Type
@@ -175,6 +177,7 @@ meta:
     dbd31f29-8b03-46f8-819a-181826ff96c0: New # New
     e325439d-f974-4c27-a2d9-2fe44cce12bb: Quote # Quote
     ea1d1d9d-cf47-49b6-b446-f180827ab5d2: Kaarten # Kaarten
+    ec0547b4-89af-43de-a95e-02e522e2d6c0: 'Menu items' # Menu items
     edb6d78c-27f5-4522-852d-2df53429bb71: Errors # Errors
     edd82513-9dec-4df9-a2a1-300da844a91f: 'Parkinson trainingscentrum' # Parkinson trainingscentrum
     f9a50eaa-e4c7-4211-bfda-4797859199e9: 'Gedeelde content blokken' # Gedeelde content blokken

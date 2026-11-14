@@ -1,0 +1,27 @@
+columnSuffix: null
+handle: page
+instructions: null
+name: Pagina
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: 'Voeg pagina toe'
+  showSearchInput: true
+  showSiteMenu: false
+  showUnpermittedEntries: false
+  showUnpermittedSections: false
+  sources:
+    - 'section:db6df807-fdb5-4bef-a3f5-2ebb6800c0bd' # Artikelen
+    - 'section:6548b4e4-c92a-4820-8d2f-065cbf1bda66' # Indexes
+    - 'section:b7fa6983-cbe4-435a-a345-b065911c3442' # Pagina's
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

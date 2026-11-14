@@ -3,14 +3,9 @@
 {% set size = size|default('large') %}
 {% set text = text|default('Meer info'|t) %}
 {% set target = target|default('') %}
-{% set icon = icon|default(false) %}
-{% set iconPosition = iconPosition|default('left') %}
 {% set type = type|default('button') %}
 {% set fullWidth = fullWidth|default('auto') %}
 {% set buttonClasses = buttonClasses|default(false) %}
-{% set rel = rel|default(false) %}
-{% set role = role|default(false) %}
-{% set disabled = disabled|default(false) %}
 {% set baseClasses = 'inline-flex items-center justify-center font-bold text-base transition ease-in-out duration-150' %}
 
 {% switch theme %}
@@ -73,28 +68,10 @@
 	{% if type %}
 		{% set attributes = attributes|merge({type: type}) %}
 	{% endif %}
-
-	{% if disabled == true %}
-		{% set attributes = attributes|merge({'aria-disabled': 'true' }) %}
-		{% set attributes = attributes|merge({tabindex: '-1' }) %}
-		{% set attributes = attributes|merge({class: [attributes.class|join(' '), 'cursor-not-allowed opacity-50']}) %}
-	{% endif %}
 {% endif %}
 
 {% apply spaceless %}
 <{{ htmlTag }} {{attr(attributes)}}>
-		{% if icon and iconPosition == 'left' %}
-      <span aria-hidden="true">
-        {{ inlineSvg(icon, 'mr-2 size-3 fill-current', { sanitize: true, namespace: true }) }}
-      </span>
-		{% endif %}
-
-		{{ text }}
-
-		{% if icon and iconPosition == 'right' %}
-      <span aria-hidden="true">
-        {{ inlineSvg(icon, 'ml-2 size-3 fill-current', { sanitize: true, namespace: true }) }}
-      </span>
-		{% endif %}
+	{{ text }}
 </{{ htmlTag }}>
 {% endapply %}

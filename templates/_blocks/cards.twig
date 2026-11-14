@@ -11,7 +11,7 @@
             size: "medium",
         } %}
     </div>
-    <div class="grid grid-cols-3  gap-32">
+    <div class="grid lg:grid-cols-3  gap-32">
         {% for card in block.cards.all() %}
             <div class="bg-white p-32 rounded-xl flex flex-col gap-16">
                 {% set image = card.singleImage[0] %}
