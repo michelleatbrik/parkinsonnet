@@ -1,4 +1,4 @@
-dateModified: 1794691945
+dateModified: 1794693677
 elementSources:
   craft\elements\Entry:
     -
@@ -112,9 +112,9 @@ fs:
     hasUrls: true
     name: Bestanden
     settings:
-      path: '@webroot/assets/files'
+      path: $ASSETS_PATH
     type: craft\fs\Local
-    url: '@assetsUrl/assets/files'
+    url: $ASSETS_URL
   images:
     hasUrls: true
     name: Images
@@ -139,7 +139,6 @@ meta:
     41acee22-6393-41e7-a771-e5fd28d42beb: 'Praktijk Driebergen' # Praktijk Driebergen
     057c8c38-dc14-4f4f-8bc8-14a7232d3905: 'Gedeeld blok' # Gedeeld blok
     61dcf7c4-2790-4da9-a604-8258e7728ad0: Buttons # Buttons
-    65bb950b-bf8c-46a5-b2d3-8fa38ea6f215: 'Contact Form' # Contact Form
     86dfc9bd-0363-4046-a638-26e03cd481da: 'Afbeelding (meerdere)' # Afbeelding (meerdere)
     87add8ee-18cc-4272-8a4c-4fd06d16ec25: "Pagina's" # Pagina's
     93f18740-c2f0-4e41-886e-b092eb38e71f: Layout # Layout
@@ -173,7 +172,6 @@ meta:
     d602da2a-239f-4f18-93fd-8047af89cdd0: Kop # Kop
     d52247de-f951-467f-823c-4808b53741ca: 'Gedeeld blok' # Gedeeld blok
     db6df807-fdb5-4bef-a3f5-2ebb6800c0bd: Artikelen # Artikelen
-    dbd31f29-8b03-46f8-819a-181826ff96c0: New # New
     e325439d-f974-4c27-a2d9-2fe44cce12bb: Quote # Quote
     ea1d1d9d-cf47-49b6-b446-f180827ab5d2: Kaarten # Kaarten
     ec0547b4-89af-43de-a95e-02e522e2d6c0: 'Menu items' # Menu items
@@ -193,29 +191,7 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.4.3
-  datastar:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   embeddedassets:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  formie:
-    edition: standard
-    enabled: true
-    licenseKey: 435ASQ7ZIWT7QYQXDI5WQTZX
-    schemaVersion: 3.4.12
-  imager-x:
-    edition: pro
-    enabled: true
-    licenseKey: TOFKTL8ADBOVD67S78HIN5NL
-    schemaVersion: 4.0.0
-  imager-x-gumlet-transformer:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  imager-x-power-pack:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
@@ -265,5 +241,5 @@ system:
   live: true
   name: 'Parkinson trainingscentrum'
   retryDuration: 60
-  schemaVersion: 5.11.0.2
+  schemaVersion: 5.12.0.2
   timeZone: America/Los_Angeles

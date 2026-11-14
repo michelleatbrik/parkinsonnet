@@ -42,6 +42,7 @@ fieldLayouts:
 fs: images
 handle: images
 name: Images
+propagationMethod: all
 sortOrder: 3
 subpath: ''
 titleTranslationKeyFormat: null
