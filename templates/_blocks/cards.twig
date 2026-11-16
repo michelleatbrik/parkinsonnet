@@ -1,6 +1,6 @@
 {% import '_macros/retcon.twig' as retcon %}
 
-<div class="container bg-primary/10 flex flex-col gap-48">
+<div class="container flex flex-col gap-48">
     <div class="lg:w-3/5 flex flex-col gap-24">
         {% if block.preHeading|length %}
             <div class="uppercase text-20/120 font-bold text-primary ">{{ block.preHeading }}</div>
@@ -13,16 +13,18 @@
     </div>
     <div class="grid lg:grid-cols-3  gap-32">
         {% for card in block.cards.all() %}
-            <div class="bg-white p-32 rounded-xl flex flex-col gap-16">
-                {% set image = card.singleImage[0] %}
-                {% include "_components/atoms/image/image.twig" with {
-                    image: image,
-                    transform: 'cardIcon',
-                    alt: '',
-                    imageClasses: 'size-96 object-contain',
-                    wrapperClasses: 'w-96 shrink-0 mb-8',
-                    sizes: '96px'
-                } %}
+            <div class="bg-primary/10 p-32 rounded-xl flex flex-col gap-16">
+                {% if card.singleImage.one()|length %}
+                    {% set image = card.singleImage[0] %}
+                    {% include "_components/atoms/image/image.twig" with {
+                        image: image,
+                        transform: 'cardIcon',
+                        alt: '',
+                        imageClasses: 'size-96 object-contain',
+                        wrapperClasses: 'w-96 shrink-0 mb-8',
+                        sizes: '96px'
+                    } %}
+                {% endif %}
                 <div class="text-28/120 font-bold">{{ card.title }}</div>
                 {% if card.text %}
                     {{ retcon.default(card.text) }}

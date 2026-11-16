@@ -1,4 +1,4 @@
-dateModified: 1794693677
+dateModified: 1794864279
 elementSources:
   craft\elements\Entry:
     -
@@ -166,6 +166,7 @@ meta:
     c798cdf5-723e-4cdc-8ac1-6c527b1a14a6: Bovenkop # Bovenkop
     c957c2ee-ff8a-4973-8111-58c21b775495: 'Menu item' # Menu item
     c3833bf8-fd94-41d8-9ffc-edd0fa60fc6a: Baseplate # Baseplate
+    c97567a9-fdf7-48af-97b7-8898136847f5: 'Text with media' # Text with media
     cffde261-31c9-424a-9d39-86be6078c848: 'Tekst met media' # Tekst met media
     d4a4bc7c-6065-4510-878b-e4e3ef6ec1ce: Type # Type
     d544c7a1-06b0-46c7-b2a6-8987f2c6bd84: 'Tekst (simpel)' # Tekst (simpel)

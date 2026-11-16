@@ -1,3 +1,64 @@
-{% include "_components/atoms/text/text.twig" with {
-    html: '<p>' ~ block.body ~ '</p>'
-} %}
+{% import '_macros/retcon.twig' as retcon %}
+
+<div class="relative">
+    <div class="grid z-10 container lg:grid-cols-12 grid-cols-1 lg:gap-y-0 gap-y-32 gap-x-64">
+        
+        <figure class="{{ block.textPosition == 'right' ? 'lg:order-2' : 'lg:order-1' }} lg:col-span-6 relative aspect-[1-1] z-10">
+            {% if block.singleVideo|length %}
+                {% set video = block.singleVideo.one() %}
+
+                {% include '_components/molecules/videoPlayer/videoPlayer.twig' with {
+                    video: video.url,
+                    posterImage: block.singleImage.one() ?? null,
+                    wrapperClasses: 'rounded-3xl',
+                    controls: true,
+                } %}
+            {% elseif block.singleImage|length %}
+                {% set image = block.singleImage[0] %}
+
+                {% include "_components/atoms/image/image.twig" with {
+                    image: image,
+                    imageMobile: image,
+                    transform: 'textWithMedia',
+                    mobileTransform: 'textWithMedia',
+                    imageClasses: 'w-full h-full object-cover rounded-3xl',
+                    wrapperClasses: 'w-full',
+                } %}
+
+            {% endif %}
+        </figure>
+
+        <div class="w-full lg:w-[95%] lg:col-span-6 relative {{ block.textPosition == 'right' ? 'lg:order-1' : 'lg:order-2' }} h-full flex lg:items-start">
+            <div class="flex flex-col gap-24">
+                {% if block.preHeading|length %}
+                    <div class="uppercase text-20/120 font-bold text-primary ">{{ block.preHeading }}</div>
+                {% endif %}
+                <div class="flex flex-row gap-16 items-center">    
+                    {% include "_components/atoms/heading/heading.twig" with { htmlTag: "h2", text: block.heading, headingClasses: '', color: "black", size: "small", textTransform: ""  } only %}
+                </div>
+                {% if block.body|length %}
+                    <div>
+                        {{ retcon.default(block.body) }}
+                    </div>
+                {% endif %}
+
+                {% set buttons = block.buttons.all() %}
+
+                {% if buttons|length %}
+                    <div class="flex flex-wrap gap-16">
+                        {% for item in buttons %}
+                            {% if item.button %}
+                                {% include "_components/atoms/button/button.twig" with {
+                                    url: item.button.url,
+                                    text: item.button.title ?: (item.button.element ? item.button.element.title : item.button.url),
+                                    target: item.button.target,
+                                    theme: loop.first ? 'primary' : 'secondary',
+                                } only %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
