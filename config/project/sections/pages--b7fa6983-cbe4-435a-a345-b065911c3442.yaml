@@ -12,7 +12,7 @@ previewTargets:
     label: 'Primary entry page'
     refresh: '1'
     urlFormat: '{url}'
-propagationMethod: all
+propagationMethod: none
 siteSettings:
   a0934f1f-fd61-4f48-ae9a-3afec428cafe: # Oefentherapeut
     enabledByDefault: true

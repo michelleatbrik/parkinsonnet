@@ -1,0 +1,32 @@
+{% import '_macros/retcon.twig' as retcon %}
+<section class="bg-action/10">
+    <div class="container">
+        <div class=" w-full mx-auto max-w-5xl flex justify-center flex-col gap-48">
+            <div class=" justify-center text text-center flex flex-col gap-24">
+                {% if block.preHeading|length %}
+                    <div class="uppercase text-20/120 font-bold text-primary ">{{ block.preHeading }}</div>
+                {% endif %}
+                {% include "_components/atoms/heading/heading.twig" with {
+                    htmlTag: "h2",
+                    text: block.title,
+                    size: "medium",
+                } %}
+            </div>
+            <div class="">
+                {% for accordionItem in block.accordion.all() %}
+                    <details class="w-full border-t last:border-b border-black group">
+                        <summary class="marker:hidden [&::-webkit-details-marker]:hidden  flex flex-row gap-12 group-hover:text-primary py-32 group-open:text-primary justify-between cursor-pointer font-heading font-extrabold select-none">
+                            <span class="lg:w-4/5 lg:text-28/120 text-22">
+                                {{ accordionItem.accordionTitle }}
+                            </span>
+                            {{ inlineSvg('/icons/close', 'size-24 text-black stroke-current block rotate-45 group-open:rotate-90 shrink-0 transition-all duration-300 ease-in-out', { sanitize: true, namespace: true }) }}
+                        </summary>
+                        <div class="-mt-8 mb-32">
+                            {{ retcon.default(accordionItem.accordionText) }}
+                        </div>
+                    </details>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

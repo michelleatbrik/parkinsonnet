@@ -1,0 +1,105 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  9f08d9aa-1532-4b7c-81b8-403d789bef70:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-11-23T20:33:48+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c798cdf5-723e-4cdc-8ac1-6c527b1a14a6 # Bovenkop
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 922ed3f0-969d-47d1-888c-756127ce5ab8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-11-23T20:31:30+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 30ca9da7-3302-4f44-85cf-f11fd812b511
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-23T20:33:48+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d544c7a1-06b0-46c7-b2a6-8987f2c6bd84 # Tekst (simpel)
+            handle: intro
+            instructions: null
+            label: Intro
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 999d0ffa-a0ba-4ee6-8799-aeb67b05979f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-23T20:36:33+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: fb5e5fee-9f71-47e8-8603-f29ece432c4b # Accordion
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: edb6f96a-3ff4-4af4-be93-41bb0f1e9c2d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: ecdaffbc-e67b-4da4-b6c0-8f922eef5cb2
+        userCondition: null
+    thumbFieldKey: null
+handle: accordionBlock
+hasTitleField: true
+icon: plus-large
+name: Accordion
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

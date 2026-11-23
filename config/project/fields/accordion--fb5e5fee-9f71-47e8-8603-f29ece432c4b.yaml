@@ -1,0 +1,31 @@
+columnSuffix: null
+handle: accordion
+instructions: null
+name: Accordion
+searchable: false
+settings:
+  createButtonLabel: 'Nieuwe vraag'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 43b1f0b5-3f24-4e54-b92c-a82123d988c2 # Accordion item
+        -
+          - group
+          - Algemeen
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: none
+  showCardsInGrid: false
+  viewMode: blocks
+tip: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
+warning: null

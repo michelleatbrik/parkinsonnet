@@ -1,0 +1,60 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  0ffae430-c512-4575-aea3-52f85267e98f:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-11-23T20:34:55+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c798cdf5-723e-4cdc-8ac1-6c527b1a14a6 # Bovenkop
+            handle: accordionTitle
+            instructions: null
+            label: Titel
+            oldFieldUid: c798cdf5-723e-4cdc-8ac1-6c527b1a14a6 # Bovenkop
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0a7c8105-c914-4baf-9192-a8b8a6aa3bd5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-11-23T20:34:55+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d544c7a1-06b0-46c7-b2a6-8987f2c6bd84 # Tekst (simpel)
+            handle: accordionText
+            instructions: null
+            label: Tekst
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 371d4a75-cfcb-4aaf-87cd-4b16baff648d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhoud
+        uid: af7ecb80-5ad5-46b2-b0c1-2121b94bc64a
+        userCondition: null
+    thumbFieldKey: null
+handle: accordionItem
+hasTitleField: false
+icon: null
+name: 'Accordion item'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

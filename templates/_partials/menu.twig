@@ -1,16 +1,16 @@
 {% set menuItems = menu.menuItems.all() %}
 
-<header x-data="mobileMenu" class="lg:mb-[90px] mb-[83px]">
-    <div class="w-full bg-white fixed top-0 z-[1300] border border-black/15">
-        <div class="flex py-20 justify-between container items-center">
+<header x-data="mobileMenu" class="lg:mb-96 ">
+    <div class=" bg-white h-96 flex justify-between w-full items-center fixed top-0 z-[1300] border border-black/15">
+        <div class="container py-0 flex items-center justify-between">
 
             {# Logo #}
-            <a href="{{ currentSite.baseUrl }}" class="w-164">
-                <img
-                    class="w-164"
-                    src="{{ currentSite.baseUrl }}/dist/img/logo/logo-parkinson.png"
-                    alt="{{ siteName }}"
-                >
+            <a href="{{ currentSite.baseUrl }}">
+                {% if currentSite.handle == "default" %}
+                    <img class="w-200" src="{{ currentSite.baseUrl }}/dist/img/logo/logo-trainingscentrum.png" alt="{{ siteName }}">
+                {% else %}
+                    <img class="w-200" src="{{ currentSite.baseUrl }}/dist/img/logo/logo-heuvelrug.png" alt="{{ siteName }}">
+                {% endif %}
             </a>
 
             {# Desktop navigatie #}

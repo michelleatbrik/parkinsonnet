@@ -64,6 +64,14 @@ settings:
         -
           - group
           - Algemeen
+    -
+      __assoc__:
+        -
+          - uid
+          - 6b2b170d-3e31-4366-9cd4-a13d4a032007 # Accordion
+        -
+          - group
+          - Algemeen
   includeTableView: false
   maxEntries: null
   minEntries: null

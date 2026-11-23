@@ -1,4 +1,4 @@
-dateModified: 1794864279
+dateModified: 1795468907
 elementSources:
   craft\elements\Entry:
     -
@@ -131,12 +131,14 @@ meta:
     5b32607c-44dd-4704-93ab-43b9b6098b44: Kaarten # Kaarten
     5fe4b921-1ad2-4cce-bf81-bb2fe1f766a3: 'Externe url' # Externe url
     6a22db12-1689-4b38-9cae-ec941874047e: Knop # Knop
+    6b2b170d-3e31-4366-9cd4-a13d4a032007: Accordion # Accordion
     07f30295-f12c-4385-997c-357a55867a55: Menu # Menu
     8d87bf9f-8546-434b-a971-6407e109f8aa: Blokken # Blokken
     8f1de83a-5ad7-4f76-8394-6aab1d2b4601: Kaart # Kaart
     9a2d25a2-dae8-4bbd-95da-9fbd7ee2c1fc: Pagina # Pagina
     10e2197c-c763-463e-998a-a704543fd784: 'Platte tekst' # Platte tekst
     41acee22-6393-41e7-a771-e5fd28d42beb: 'Praktijk Driebergen' # Praktijk Driebergen
+    43b1f0b5-3f24-4e54-b92c-a82123d988c2: 'Accordion item' # Accordion item
     057c8c38-dc14-4f4f-8bc8-14a7232d3905: 'Gedeeld blok' # Gedeeld blok
     61dcf7c4-2790-4da9-a604-8258e7728ad0: Buttons # Buttons
     86dfc9bd-0363-4046-a638-26e03cd481da: 'Afbeelding (meerdere)' # Afbeelding (meerdere)
@@ -179,6 +181,7 @@ meta:
     edd82513-9dec-4df9-a2a1-300da844a91f: 'Parkinson trainingscentrum' # Parkinson trainingscentrum
     f9a50eaa-e4c7-4211-bfda-4797859199e9: 'Gedeelde content blokken' # Gedeelde content blokken
     f659e4e5-e885-4efe-918b-f9ea22bef550: 'Afbeelding (enkel)' # Afbeelding (enkel)
+    fb5e5fee-9f71-47e8-8603-f29ece432c4b: Accordion # Accordion
 plugins:
   aws-s3:
     edition: standard
